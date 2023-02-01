@@ -1,5 +1,4 @@
-git remote add origin https://github.com/Adkirf/Portfolio.git
-git push -u origin main<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+
 <a name="readme-top"></a>
 
 <!--
