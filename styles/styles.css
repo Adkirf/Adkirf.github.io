@@ -258,7 +258,6 @@ body {
           animation: textclip 2s linear infinite;
 }
 .home-content .right-home {
-  padding-right: 3rem;
   padding-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -688,7 +687,7 @@ body {
   display: flex;
   overflow: scroll;
   font-size: 1.25rem;
-  max-height: 300px;
+  max-height: 100px;
   color: var(--color-grey-2);
   text-align: center;
 }
@@ -896,7 +895,11 @@ body {
 
 @media screen and (max-width: 1100px) {
   .home-content .left-home .flip-box-back .animate-charcter {
-    font-size: 3rem !important;
+    font-size: 2.5rem;
+  }
+  .home-content .right-home {
+    font-size: 1rem;
+    gap: 3.5rem;
   }
 }
 @media screen and (max-width: 800px) {
@@ -1115,5 +1118,30 @@ body {
   }
   .blogs .hvr-radial-out .blog-text p {
     line-height: 1rem !important;
+  }
+}
+@media screen and (max-width: 475px) {
+  .do-container .left-do p {
+    font-size: 0.8rem;
+  }
+  .do-container .right-do .hvr-push .do-text .small-text {
+    font-size: 0.75rem;
+  }
+  .myway .myway-item .mw-duration {
+    margin-left: 25px;
+  }
+  .myway .myway-item h5 span {
+    font-size: 1rem;
+  }
+  .myway .myway-item p {
+    font-size: 0.9rem;
+  }
+  .myway .myway-item .mw-con i {
+    left: -20px;
+    width: 40px;
+    height: 40px;
+  }
+  .myway .myway-item .mw-con i i {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=styles.css.map */
