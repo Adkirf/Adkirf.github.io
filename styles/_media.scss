@@ -1,3 +1,5 @@
+@media screen and (max-width: 1200px) {}
+
 @media screen and (max-width: 800px) {
     .main-title {
         h2 {
@@ -39,7 +41,6 @@
     .home-content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-
 
 
         .right-home {
@@ -217,19 +218,20 @@
 
             h3 {
                 margin-top: 0rem !important;
-                font-size: 1rem !important;
+                font-size: .8rem !important;
             }
 
             .icons {
-                height: 50px !important;
+                height: 30px !important;
 
                 a {
-                    height: 30px !important;
-                    width: 30px !important;
+                    height: 20px !important;
+                    width: 20px !important;
+                    background-color: var(--color-primary) !important;
 
                     i {
                         color: var(--color-secondary) !important;
-                        font-size: 1.75rem !important;
+                        font-size: 1rem !important;
                     }
 
                     &:hover {
@@ -241,7 +243,7 @@
 
         .middle {
             h3 {
-                font-size: 1.75rem !important;
+                font-size: 1.25rem !important;
             }
 
             .description-text {
@@ -315,3 +317,7 @@
         }
     }
 }
+
+//Do container, do items right breakpoint
+//Do container, my way text size margin right, icon & duration left --
+@media screen and (max-width:475px) {}

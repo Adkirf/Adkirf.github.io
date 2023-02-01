@@ -59,7 +59,6 @@ body {
 
 .active {
 
-    padding: 15rem;
     display: block;
     animation: scaleAnim 1s ease-in-out;
     transform: translateY(0) scale(1);
@@ -167,8 +166,7 @@ body {
     font-family: 'Poppings', sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 80%;
-    height: 80%;
+    height: 95%;
 
     .left-home {
         display: flex;

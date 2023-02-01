@@ -55,7 +55,6 @@ body {
 }
 
 .active {
-  padding: 15rem;
   display: block;
   -webkit-animation: scaleAnim 1s ease-in-out;
           animation: scaleAnim 1s ease-in-out;
@@ -166,8 +165,7 @@ body {
   font-family: "Poppings", sans-serif;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 80%;
-  height: 80%;
+  height: 95%;
 }
 .home-content .left-home {
   display: flex;
@@ -1062,24 +1060,25 @@ body {
 .done-items .right h3,
 .done-items .middle h3 {
     margin-top: 0rem !important;
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
   }
   .done-items .left .icons,
 .done-items .right .icons,
 .done-items .middle .icons {
-    height: 50px !important;
+    height: 30px !important;
   }
   .done-items .left .icons a,
 .done-items .right .icons a,
 .done-items .middle .icons a {
-    height: 30px !important;
-    width: 30px !important;
+    height: 20px !important;
+    width: 20px !important;
+    background-color: var(--color-primary) !important;
   }
   .done-items .left .icons a i,
 .done-items .right .icons a i,
 .done-items .middle .icons a i {
     color: var(--color-secondary) !important;
-    font-size: 1.75rem !important;
+    font-size: 1rem !important;
   }
   .done-items .left .icons a:hover,
 .done-items .right .icons a:hover,
@@ -1087,7 +1086,7 @@ body {
     background-color: var(--color-grey-5) !important;
   }
   .done-items .middle h3 {
-    font-size: 1.75rem !important;
+    font-size: 1.25rem !important;
   }
   .done-items .middle .description-text {
     font-size: 1rem !important;
