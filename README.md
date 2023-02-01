@@ -23,7 +23,7 @@
   <p align="center">
     Beginner friendly Portfolio. 
     <br />
-    <a href="https://github.com/Adkirf/Portfolio.git"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Adkirf/Adkirf.github.io"><strong> Explore the Adkirf Portfolio »</strong></a>
     <br />
     <br />
 
