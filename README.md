@@ -112,7 +112,7 @@ Don't forget to give the project a star! Thanks again!
 
 Your Name - [@adkirf](https://twitter.com/adkirf)
 
-Project Link: [Adkirf Portfolio] (https://github.com/Adkirf/Adkirf.github.io/blob/master/README.md)
+Project Link: [Adkirf Portfolio] (https://adkirf.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
