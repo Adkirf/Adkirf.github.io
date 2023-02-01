@@ -896,12 +896,12 @@ body {
   color: var(--color-secondary);
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 800px) {
   .main-title h2 {
     font-size: 2.5rem !important;
   }
   .container {
-    padding: 1rem 1rem 8rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
   }
   .theme-btn {
     opacity: 0.5;
@@ -999,9 +999,13 @@ body {
   }
   .do-container {
     grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 7rem;
   }
-  .do-container .right-do .hvr-push {
-    margin-top: 3rem;
+  .do-container .left-do {
+    padding: 0rem !important;
+  }
+  .do-container .right-do .hvr-push .do-text {
+    padding: 0.75rem;
   }
   .do-container .right-do .hvr-push .do-text .large-text {
     font-size: 1.2rem;
@@ -1024,9 +1028,10 @@ body {
     white-space: nowrap;
   }
   .myway .myway-item {
-    margin-left: 15%;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
+    padding-left: 1rem;
   }
   .myway .myway-item .mw-duration {
     width: -webkit-fit-content;
@@ -1036,6 +1041,7 @@ body {
   }
   .myway .myway-item p {
     white-space: normal;
+    margin-right: 10%;
   }
   .done {
     padding-bottom: 5rem !important;
@@ -1074,6 +1080,11 @@ body {
 .done-items .middle .icons a i {
     color: var(--color-secondary) !important;
     font-size: 1.75rem !important;
+  }
+  .done-items .left .icons a:hover,
+.done-items .right .icons a:hover,
+.done-items .middle .icons a:hover {
+    background-color: var(--color-grey-5) !important;
   }
   .done-items .middle h3 {
     font-size: 1.75rem !important;
