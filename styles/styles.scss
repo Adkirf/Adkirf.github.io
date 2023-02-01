@@ -166,14 +166,12 @@ body {
     font-family: 'Poppings', sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 95%;
 
     .left-home {
         display: flex;
         align-items: center;
         position: relative;
-        top: 4rem;
-        left: 4rem;
+
 
         .h-shape {
             width: 50%;
@@ -691,7 +689,8 @@ body {
         height: 500px;
         grid-template-columns: 1fr 3fr 1fr;
         justify-items: center;
-        padding: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
         justify-content: center;
         align-items: center;
 

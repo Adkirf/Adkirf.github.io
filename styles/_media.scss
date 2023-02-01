@@ -1,4 +1,14 @@
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+
+
+    .home-content {
+        .left-home {
+            .flip-box .flip-box-inner .flip-box-back .col-md-12 .text-center .animate-character {
+                font-size: 3rem !important;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 800px) {
     .main-title {

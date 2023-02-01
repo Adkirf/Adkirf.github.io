@@ -165,14 +165,11 @@ body {
   font-family: "Poppings", sans-serif;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 95%;
 }
 .home-content .left-home {
   display: flex;
   align-items: center;
   position: relative;
-  top: 4rem;
-  left: 4rem;
   /* Style the front side (fallback if image is missing) */
   /* Style the back side */
 }
@@ -600,7 +597,8 @@ body {
   height: 500px;
   grid-template-columns: 1fr 3fr 1fr;
   justify-items: center;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   justify-content: center;
   align-items: center;
 }
@@ -894,6 +892,11 @@ body {
   color: var(--color-secondary);
 }
 
+@media screen and (max-width: 1200px) {
+  .home-content .left-home .flip-box .flip-box-inner .flip-box-back .col-md-12 .text-center .animate-character {
+    font-size: 3rem !important;
+  }
+}
 @media screen and (max-width: 800px) {
   .main-title h2 {
     font-size: 2.5rem !important;
