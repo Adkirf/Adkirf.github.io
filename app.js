@@ -26,7 +26,6 @@ function PageTransitions() {
 }
 
 function nextSwitchPossible(switchForwards) {
-  console.log(1);
   for (let i = 0; i < doneItems.length; i++) {
     if (switchForwards) {
       doneItems[i].classList.remove("left");

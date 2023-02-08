@@ -302,6 +302,24 @@
 //Do container, do items right breakpoint
 //Do container, my way text size margin right, icon & duration left --
 @media screen and (max-width:475px) {
+    .main-title {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .switch-btn {
+        bottom: 20%
+    }
+
+    .s-right {
+        right: 5%;
+    }
+
+    .s-left {
+        left: 5%;
+    }
+
     .do-container .left-do p {
         font-size: .8rem
     }
