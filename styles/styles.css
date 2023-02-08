@@ -56,17 +56,8 @@ body {
 
 .active {
   display: block;
-  -webkit-animation: scaleAnim 1s ease-in-out;
-          animation: scaleAnim 1s ease-in-out;
+  animation: scaleAnim 1s ease-in-out;
   transform: translateY(0) scale(1);
-}
-@-webkit-keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    transform: translateY(0) scaleY(1);
-  }
 }
 @keyframes scaleAnim {
   0% {
@@ -148,12 +139,6 @@ body {
 .flip-box:active .flip-box-inner img {
   transition: all 2s ease-in-out;
   filter: blur(0px) !important;
-}
-
-@-webkit-keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
 }
 
 @keyframes textclip {
@@ -254,8 +239,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: textclip 2s linear infinite;
-          animation: textclip 2s linear infinite;
+  animation: textclip 2s linear infinite;
 }
 .home-content .right-home {
   padding-top: 5rem;
@@ -285,14 +269,6 @@ body {
 }
 
 /*Do Content*/
-@-webkit-keyframes hvr-pulse {
-  25% {
-    transform: scale(1.1);
-  }
-  75% {
-    transform: scale(0.9);
-  }
-}
 @keyframes hvr-pulse {
   25% {
     transform: scale(1.1);
@@ -304,13 +280,9 @@ body {
 .hvr-pulse:hover,
 .hvr-pulse:focus,
 .hvr-pulse:active {
-  -webkit-animation-name: hvr-pulse;
   animation-name: hvr-pulse;
-  -webkit-animation-duration: 2;
   animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 .hvr-pulse:hover .skill-badge,
@@ -322,15 +294,6 @@ body {
 .hvr-pulse:focus .skill-name,
 .hvr-pulse:active .skill-name {
   color: var(--color-secondary);
-}
-
-@-webkit-keyframes hvr-push {
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 @keyframes hvr-push {
   50% {
@@ -350,13 +313,9 @@ body {
 .hvr-push:hover,
 .hvr-push:focus,
 .hvr-push:active {
-  -webkit-animation-name: hvr-push;
   animation-name: hvr-push;
-  -webkit-animation-duration: 0.3s;
   animation-duration: 0.3s;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 
@@ -528,11 +487,6 @@ body {
 }
 
 /*Done Content*/
-@-webkit-keyframes float {
-  100% {
-    transform: translateY(-40px);
-  }
-}
 @keyframes float {
   100% {
     transform: translateY(-40px);
@@ -580,12 +534,23 @@ body {
 
 .switch-btn {
   position: fixed;
-  right: 17.5%;
   bottom: 12.5%;
 }
 .switch-btn i {
   font-size: 3rem;
   color: var(--color-secondary);
+}
+
+.s-right {
+  right: 17.5%;
+}
+
+.s-left {
+  left: 17.5%;
+}
+
+.list-end {
+  display: none;
 }
 
 .done {
@@ -604,6 +569,8 @@ body {
 .done .done-items .done-item {
   display: none;
   position: absolute;
+  transform: translateY(-100%) scale(0);
+  transition: all 0.4s ease-in-out;
 }
 .done .done-items .left,
 .done .done-items .middle,
@@ -715,19 +682,39 @@ body {
 .done .done-items .right .done-description .description-text {
   display: none;
 }
+@keyframes projectAnimL {
+  0% {
+    transform: translateX(0) scaleX(-100%);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
 .done .done-items .left {
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-column-start: 3;
-  grid-column-end: 4;
+  animation: projectAnimL 1s ease-in-out;
+  transform: translateX(0) scale(1);
 }
 .done .done-items .middle {
   grid-column-start: 2;
   grid-column-end: 3;
+  animation: projectAnimM 1s ease-in-out;
+  transform: translateX(0) scale(1);
+}
+@keyframes projectAnimM {
+  0% {
+    transform: translateX(0) scaleX(-100%);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
 }
 .done .done-items .right {
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  animation: projectAnimL 1s ease-in-out;
+  transform: translateX(0) scale(1);
 }
 
 /*Doing Content*/
@@ -1011,7 +998,6 @@ body {
     padding-left: 1rem;
   }
   .myway .myway-item .mw-duration {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     padding: 0.3rem 0.8rem 0.3rem 0.8rem;
@@ -1023,7 +1009,7 @@ body {
   .done {
     padding-bottom: 5rem !important;
   }
-  .switch-btn {
+  .switch-btn-right {
     right: 10% !important;
     bottom: 10% !important;
   }
@@ -1031,37 +1017,37 @@ body {
     height: 400px !important;
   }
   .done-items .left,
-.done-items .right,
-.done-items .middle {
+  .done-items .right,
+  .done-items .middle {
     gap: 0rem !important;
   }
   .done-items .left h3,
-.done-items .right h3,
-.done-items .middle h3 {
+  .done-items .right h3,
+  .done-items .middle h3 {
     margin-top: 0rem !important;
     font-size: 0.8rem !important;
   }
   .done-items .left .icons,
-.done-items .right .icons,
-.done-items .middle .icons {
+  .done-items .right .icons,
+  .done-items .middle .icons {
     height: 30px !important;
   }
   .done-items .left .icons a,
-.done-items .right .icons a,
-.done-items .middle .icons a {
+  .done-items .right .icons a,
+  .done-items .middle .icons a {
     height: 20px !important;
     width: 20px !important;
     background-color: var(--color-primary) !important;
   }
   .done-items .left .icons a i,
-.done-items .right .icons a i,
-.done-items .middle .icons a i {
+  .done-items .right .icons a i,
+  .done-items .middle .icons a i {
     color: var(--color-secondary) !important;
     font-size: 1rem !important;
   }
   .done-items .left .icons a:hover,
-.done-items .right .icons a:hover,
-.done-items .middle .icons a:hover {
+  .done-items .right .icons a:hover,
+  .done-items .middle .icons a:hover {
     background-color: var(--color-grey-5) !important;
   }
   .done-items .middle h3 {

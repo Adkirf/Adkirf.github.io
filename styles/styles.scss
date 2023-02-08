@@ -665,10 +665,8 @@ body {
     /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }
 
-
 .switch-btn {
     position: fixed;
-    right: 17.5%;
     bottom: 12.5%;
 
 
@@ -676,8 +674,22 @@ body {
         font-size: 3rem;
         color: var(--color-secondary);
     }
+}
+
+.s-right {
+    right: 17.5%;
 
 }
+
+.s-left {
+    left: 17.5%;
+}
+
+.list-end {
+    display: none;
+}
+
+
 
 
 .done {
@@ -696,6 +708,8 @@ body {
         .done-item {
             display: none;
             position: absolute;
+            transform: translateY(-100%) scale(0);
+            transition: all .4s ease-in-out;
         }
 
         .left,
@@ -775,6 +789,7 @@ body {
                     text-align: center;
                 }
             }
+
         }
 
         .left,
@@ -802,25 +817,53 @@ body {
 
             }
 
+            @keyframes projectAnimL {
+                0% {
+                    transform: translateX(0) scaleX(-100%);
+                }
+
+                100% {
+                    transform: translateX(0) scaleX(1);
+                }
+            }
+
         }
 
 
         .left {
             grid-column-start: 1;
             grid-column-end: 2;
-            grid-column-start: 3;
-            grid-column-end: 4;
+            animation: projectAnimL 1s ease-in-out;
+            transform: translateX(0) scale(1);
+
         }
 
         .middle {
             grid-column-start: 2;
             grid-column-end: 3;
+            animation: projectAnimM 1s ease-in-out;
+            transform: translateX(0) scale(1);
+
+
+            @keyframes projectAnimM {
+                0% {
+                    transform: translateX(0) scaleX(-100%);
+                }
+
+                100% {
+                    transform: translateY(0) scaleY(1);
+                }
+            }
+
 
         }
 
         .right {
-            grid-column-start: 1;
-            grid-column-end: 2;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            animation: projectAnimL 1s ease-in-out;
+            transform: translateX(0) scale(1);
+
         }
 
     }

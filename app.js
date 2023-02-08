@@ -1,7 +1,8 @@
 const sections = document.querySelectorAll(".container");
 const sectBtns = document.querySelectorAll(".control");
 const allSections = document.querySelector(".main-content");
-const switchBtn = document.getElementById("switch");
+const rightSwitch = document.querySelectorAll(".switch-btn")[0];
+const leftSwitch = document.querySelectorAll(".switch-btn")[1];
 const doneItems = document.querySelectorAll(".done-item");
 
 function PageTransitions() {
@@ -20,37 +21,41 @@ function PageTransitions() {
     element.classList.toggle("light-mode");
   });
 
-  switchBtn.addEventListener("click", () => {
-    for (let i = 0; i < doneItems.length; i++) {
-      if (doneItems[i].classList.contains("middle")) {
-        if (i == doneItems.length - 2) {
-          doneItems[i - 1].classList.remove("left");
-          doneItems[i].classList.replace("middle", "left");
-          doneItems[i + 1].classList.replace("right", "middle");
-          doneItems[0].classList.add("right");
-        } else if (i == doneItems.length - 1) {
-          doneItems[i - 1].classList.remove("left");
-          doneItems[i].classList.replace("middle", "left");
-          doneItems[0].classList.replace("right", "middle");
-          doneItems[1].classList.add("right");
-          console.log(1);
-        } else if (i == 0) {
-          doneItems[doneItems.length - 1].classList.remove("left");
-          doneItems[i].classList.replace("middle", "left");
-          doneItems[i + 1].classList.replace("right", "middle");
-          doneItems[i + 2].classList.add("right");
-          console.log(2);
+  rightSwitch.addEventListener("click", () => nextSwitchPossible(true));
+  leftSwitch.addEventListener("click", () => nextSwitchPossible(false));
+}
+
+function nextSwitchPossible(switchForwards) {
+  console.log(1);
+  for (let i = 0; i < doneItems.length; i++) {
+    if (switchForwards) {
+      doneItems[i].classList.remove("left");
+      doneItems[i].classList.replace("middle", "left");
+      if (doneItems[i].classList.replace("right", "middle")) {
+        if (i === doneItems.length - 1) {
+          rightSwitch.classList.add("list-end");
         } else {
-          doneItems[i - 1].classList.remove("left");
-          doneItems[i].classList.replace("middle", "left");
-          doneItems[i + 1].classList.replace("right", "middle");
-          doneItems[i + 2].classList.add("right");
-          console.log(3);
+          doneItems[i + 1].classList.add("right");
+          leftSwitch.classList.remove("list-end");
         }
-        return;
+        break;
+      }
+    } else {
+      doneItems[doneItems.length - 1 - i].classList.remove("right");
+      doneItems[doneItems.length - 1 - i].classList.replace("middle", "right");
+      if (
+        doneItems[doneItems.length - 1 - i].classList.replace("left", "middle")
+      ) {
+        if (doneItems.length - 1 - i === 0) {
+          leftSwitch.classList.add("list-end");
+        } else {
+          doneItems[doneItems.length - i - 2].classList.add("left");
+          rightSwitch.classList.remove("list-end");
+        }
+        break;
       }
     }
-  });
+  }
 }
 
 PageTransitions();
