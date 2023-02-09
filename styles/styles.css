@@ -779,10 +779,10 @@ body {
     width: 100%;
     gap: 2rem;
   }
-  .flip-box:hover .flip-box-inner {
+  .flip-box:hover .flip-box-inner, .touchbtn .flip-box-inner {
     transform: rotateY(180deg);
   }
-  .flip-box:hover .flip-box-inner img {
+  .flip-box:hover .flip-box-inner img, .touchbtn .flip-box-inner img {
     transition: all 1s ease-in-out;
   }
   .home-content {

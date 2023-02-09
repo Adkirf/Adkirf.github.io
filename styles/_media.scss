@@ -41,8 +41,8 @@
 
 
     //Home Content
-    .flip-box:hover {
-        .flip-box-inner {
+    .flip-box:hover, .touchbtn  {
+        .flip-box-inner{
             transform: rotateY(180deg);
 
             img {
