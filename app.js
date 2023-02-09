@@ -7,10 +7,11 @@ const doneItems = document.querySelectorAll(".done-item");
 
 function PageTransitions() {
   //Home-Touch
-  document.querySelectorAll(".left-home").ontouchstart = 
-	() => document.querySelector(".flip-box-back").classList.toggle("touchbtn");
+  document.querySelectorAll(".left-home").ontouchstart = () => {
+    document.querySelector(".flip-box").classList.toggle("touchbtn");
+  };
   //Do-Touch
-  document.querySelector("right-do").
+  document.querySelector(".right-do").ontouchstart = 
   document.querySelector(".hvr-pulse").ontouchstart = 
 	function() {this.classList.toggle("touchbtn")};
   //Done-Touch
