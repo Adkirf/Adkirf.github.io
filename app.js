@@ -8,12 +8,12 @@ const doneItems = document.querySelectorAll(".done-item");
 function PageTransitions() {
   //Home-Touch
   document.querySelectorAll(".left-home").ontouchstart = () => {
-    document.querySelector(".flip-box").classList.toggle("touchbtn");
+    document.querySelector(".flip-box").classList.toggle("switchAdkirf");
   };
   //Do-Touch
   //document.querySelector(".right-do").ontouchstart = 
   document.querySelector(".hvr-pulse").ontouchstart = 
-	function() {this.classList.toggle("touchbtn")};
+	function() {this.classList.toggle("pulseBadge")};
   //Done-Touch
   document.querySelector(".current").ontouchstart = 
 	function() {this.classList.toggle("touchbtn")};

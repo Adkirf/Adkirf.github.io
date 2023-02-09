@@ -41,7 +41,7 @@
 
 
     //Home Content
-    .flip-box:hover, .touchbtn  {
+    .flip-box:hover, .switchAdkirf  {
         .flip-box-inner{
             transform: rotateY(180deg);
 
@@ -147,10 +147,10 @@
         
         .badges {
             flex-direction: column;
-            .touchbtn{
+            .pulseBadge{
                 -webkit-animation-name: hvr-pulse;
                 animation-name: hvr-pulse;
-                -webkit-animation-duration: 2;
+                -webkit-animation-duration: 2s;
                 animation-duration: 2s;
                 -webkit-animation-timing-function: linear;
                 animation-timing-function: linear;
