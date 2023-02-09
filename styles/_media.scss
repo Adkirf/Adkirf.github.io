@@ -22,7 +22,7 @@
     }
 
     .container {
-        padding: 1rem 1rem 1rem 1rem;
+        padding: 1rem 1rem 10rem 1rem;
 
     }
 
@@ -184,17 +184,12 @@
         padding-bottom: 5rem !important;
     }
 
-    .switch-btn-right {
-        right: 10% !important;
-        bottom: 10% !important;
-    }
-
     .done-items {
         height: 400px !important;
 
-        .left,
-        .right,
-        .middle {
+        .last,
+        .next,
+        .current {
             gap: 0rem !important;
 
             h3 {
@@ -222,7 +217,7 @@
             }
         }
 
-        .middle {
+        .current {
             h3 {
                 font-size: 1.25rem !important;
             }
