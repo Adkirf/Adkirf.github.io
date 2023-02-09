@@ -125,12 +125,10 @@ body {
 }
 
 /*home Content*/
-.flip-box:hover .flip-box-inner,
-.touchbtn .flip-box-inner {
+.flip-box:hover .flip-box-inner, .flip-box:hover .touchbtn {
   transform: rotateY(560deg);
 }
-.flip-box:hover .flip-box-inner img,
-.touchbtn .flip-box-inner img {
+.flip-box:hover .flip-box-inner img, .flip-box:hover .touchbtn img {
   transition: all 2s ease-in-out;
   filter: blur(0px) !important;
 }

@@ -135,9 +135,8 @@ body {
 
 
 /*home Content*/
-.flip-box:hover,
-.touchbtn {
-    .flip-box-inner {
+.flip-box:hover {
+    .flip-box-inner,.touchbtn {
         transform: rotateY(560deg);
 
         img {
@@ -810,12 +809,6 @@ body {
 /*Doing Content*/
 
 
-
-
-
-.blogs:hover, .touchbtn{
-    
-}
 
 
 .doing-content {
