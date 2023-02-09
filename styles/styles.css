@@ -857,7 +857,7 @@ body {
     animation-name: hvr-pulse;
     animation-duration: 2s;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
   }
   .do-badges .badges .touchbtn .skill-badge {
     border: 0.3rem solid var(--color-secondary);
