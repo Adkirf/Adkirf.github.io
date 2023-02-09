@@ -11,7 +11,7 @@ function PageTransitions() {
     document.querySelector(".flip-box").classList.toggle("touchbtn");
   };
   //Do-Touch
-  document.querySelector(".right-do").ontouchstart = 
+  //document.querySelector(".right-do").ontouchstart = 
   document.querySelector(".hvr-pulse").ontouchstart = 
 	function() {this.classList.toggle("touchbtn")};
   //Done-Touch

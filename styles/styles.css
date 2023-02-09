@@ -180,8 +180,6 @@ body {
 }
 .home-content .left-home .flip-box-front,
 .home-content .left-home .flip-box-back {
-  transition: all 0.4s ease-in-out;
-  transform: rotateY(180deg);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -199,6 +197,9 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.home-content .left-home .flip-box-back, .home-content .left-home .touchbtn {
+  transform: rotateY(180deg);
 }
 .home-content .left-home .flip-box-back img, .home-content .left-home .touchbtn img {
   width: 100%;
@@ -267,19 +268,16 @@ body {
     transform: scale(0.9);
   }
 }
-.hvr-pulse:hover,
-.touchbtn {
+.hvr-pulse:hover {
   animation-name: hvr-pulse;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-.hvr-pulse:hover .skill-badge,
-.touchbtn .skill-badge {
+.hvr-pulse:hover .skill-badge {
   border: 0.3rem solid var(--color-secondary);
 }
-.hvr-pulse:hover .skill-name,
-.touchbtn .skill-name {
+.hvr-pulse:hover .skill-name {
   color: var(--color-secondary);
 }
 @keyframes hvr-push {
@@ -854,6 +852,18 @@ body {
   }
   .do-badges .badges {
     flex-direction: column;
+  }
+  .do-badges .badges .touchbtn {
+    animation-name: hvr-pulse;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .do-badges .badges .touchbtn .skill-badge {
+    border: 0.3rem solid var(--color-secondary);
+  }
+  .do-badges .badges .touchbtn .skill-name {
+    color: var(--color-secondary);
   }
   .myway {
     padding-right: 0rem;

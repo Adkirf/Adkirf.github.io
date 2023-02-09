@@ -144,10 +144,27 @@
 
     .do-badges {
         padding-bottom: 5rem;
-
+        
         .badges {
             flex-direction: column;
+            .touchbtn{
+                -webkit-animation-name: hvr-pulse;
+                animation-name: hvr-pulse;
+                -webkit-animation-duration: 2;
+                animation-duration: 2s;
+                -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
 
+                .skill-badge {
+                    border: 0.3rem solid var(--color-secondary);
+                }
+
+                .skill-name {
+                    color: var(--color-secondary);
+                }
+            }
         }
     }
 
