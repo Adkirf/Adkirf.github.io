@@ -41,13 +41,10 @@ body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
-  transition: all 0.4s ease-in-out;
 }
 
 .container {
   display: none;
-  transform: translateY(-100%) scale(0);
-  transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
   padding: 3rem 10rem 3rem 3rem;
   cursor: default;
@@ -56,10 +53,9 @@ body {
 
 .active {
   display: block;
-  animation: scaleAnim 1s ease-in-out;
-  transform: translateY(0) scale(1);
+  animation: slide-in 1s ease-in-out;
 }
-@keyframes scaleAnim {
+@keyframes slide-in {
   0% {
     transform: translateY(-100%) scaleY(0);
   }
@@ -131,12 +127,14 @@ body {
 /*home Content*/
 .flip-box:hover .flip-box-inner,
 .flip-box:focus .flip-box-inner,
-.flip-box:active .flip-box-inner {
+.flip-box:active .flip-box-inner,
+.touchbtn .flip-box-inner {
   transform: rotateY(560deg);
 }
 .flip-box:hover .flip-box-inner img,
 .flip-box:focus .flip-box-inner img,
-.flip-box:active .flip-box-inner img {
+.flip-box:active .flip-box-inner img,
+.touchbtn .flip-box-inner img {
   transition: all 2s ease-in-out;
   filter: blur(0px) !important;
 }
@@ -165,7 +163,6 @@ body {
   position: absolute;
   left: 0;
   top: 10%;
-  z-index: -1;
   -webkit-clip-path: polygon(0 0, 76% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 0, 76% 0, 100% 100%, 0% 100%);
 }
@@ -492,7 +489,7 @@ body {
     transform: translateY(-40px);
   }
 }
-.middle {
+.current {
   display: inline-block;
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
@@ -502,7 +499,7 @@ body {
   transition-property: transform;
 }
 
-.middle:before {
+.current:before {
   pointer-events: none;
   position: absolute;
   z-index: -1;
@@ -517,16 +514,16 @@ body {
   transition-property: transform, opacity;
 }
 
-.middle:hover,
-.middle:focus,
-.middle:active {
+.current:hover,
+.current:focus,
+.current:active {
   transform: translateY(-5px);
   /* move the element up by 5px */
 }
 
-.middle:hover:before,
-.middle:focus:before,
-.middle:active:before {
+.current:hover:before,
+.current:focus:before,
+.current:active:before {
   opacity: 1;
   transform: translateY(5px);
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
@@ -558,11 +555,9 @@ body {
 }
 .done .done-items {
   display: grid;
-  height: 500px;
   grid-template-columns: 1fr 3fr 1fr;
   justify-items: center;
   padding-top: 2rem;
-  padding-bottom: 3rem;
   justify-content: center;
   align-items: center;
 }
@@ -572,57 +567,54 @@ body {
   transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
 }
-.done .done-items .left,
-.done .done-items .middle,
-.done .done-items .right {
+.done .done-items .last,
+.done .done-items .current,
+.done .done-items .next {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   position: relative;
   width: 100%;
-  height: 100%;
-  grid-row-start: 1;
-  max-width: 800px;
 }
-.done .done-items .left .done-image,
-.done .done-items .middle .done-image,
-.done .done-items .right .done-image {
+.done .done-items .last .done-image,
+.done .done-items .current .done-image,
+.done .done-items .next .done-image {
   display: flex;
   justify-content: center;
 }
-.done .done-items .left .done-image img,
-.done .done-items .middle .done-image img,
-.done .done-items .right .done-image img {
+.done .done-items .last .done-image img,
+.done .done-items .current .done-image img,
+.done .done-items .next .done-image img {
   width: 40%;
+  max-width: 300px;
+  max-height: 300px;
   border-radius: 10%;
-  max-width: 200px;
-  max-width: 200px;
 }
-.done .done-items .left .done-description,
-.done .done-items .middle .done-description,
-.done .done-items .right .done-description {
+.done .done-items .last .done-description,
+.done .done-items .current .done-description,
+.done .done-items .next .done-description {
   margin-bottom: 2rem;
 }
-.done .done-items .left .done-description h3,
-.done .done-items .middle .done-description h3,
-.done .done-items .right .done-description h3 {
+.done .done-items .last .done-description h3,
+.done .done-items .current .done-description h3,
+.done .done-items .next .done-description h3 {
   margin-top: 1rem;
   text-align: center;
   font-size: 2rem;
   color: var(--color-secondary);
 }
-.done .done-items .left .done-description .icons,
-.done .done-items .middle .done-description .icons,
-.done .done-items .right .done-description .icons {
+.done .done-items .last .done-description .icons,
+.done .done-items .current .done-description .icons,
+.done .done-items .next .done-description .icons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   height: 50px;
 }
-.done .done-items .left .done-description .icons a,
-.done .done-items .middle .done-description .icons a,
-.done .done-items .right .done-description .icons a {
+.done .done-items .last .done-description .icons a,
+.done .done-items .current .done-description .icons a,
+.done .done-items .next .done-description .icons a {
   display: flex;
   align-items: center;
   color: var(--color-white);
@@ -634,23 +626,23 @@ body {
   transition: all 0.4s ease-in-out;
   text-decoration: none;
 }
-.done .done-items .left .done-description .icons a:hover,
-.done .done-items .middle .done-description .icons a:hover,
-.done .done-items .right .done-description .icons a:hover {
+.done .done-items .last .done-description .icons a:hover,
+.done .done-items .current .done-description .icons a:hover,
+.done .done-items .next .done-description .icons a:hover {
   background-color: var(--color-secondary);
 }
-.done .done-items .left .done-description .icons a i,
-.done .done-items .middle .done-description .icons a i,
-.done .done-items .right .done-description .icons a i {
+.done .done-items .last .done-description .icons a i,
+.done .done-items .current .done-description .icons a i,
+.done .done-items .next .done-description .icons a i {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.7rem;
   color: var(--color-grey-5);
 }
-.done .done-items .left .done-description .description-text,
-.done .done-items .middle .done-description .description-text,
-.done .done-items .right .done-description .description-text {
+.done .done-items .last .done-description .description-text,
+.done .done-items .current .done-description .description-text,
+.done .done-items .next .done-description .description-text {
   display: flex;
   overflow: scroll;
   font-size: 1.25rem;
@@ -658,28 +650,28 @@ body {
   color: var(--color-grey-2);
   text-align: center;
 }
-.done .done-items .left,
-.done .done-items .right {
+.done .done-items .last,
+.done .done-items .next {
   position: relative;
   height: 50%;
 }
-.done .done-items .left .done-description,
-.done .done-items .right .done-description {
+.done .done-items .last .done-description,
+.done .done-items .next .done-description {
   margin-bottom: 1rem;
 }
-.done .done-items .left .done-description h3,
-.done .done-items .right .done-description h3 {
+.done .done-items .last .done-description h3,
+.done .done-items .next .done-description h3 {
   margin-top: 1rem;
   text-align: center;
   font-size: 1.5rem;
   color: var(--color-grey-1);
 }
-.done .done-items .left .done-description .icons,
-.done .done-items .right .done-description .icons {
+.done .done-items .last .done-description .icons,
+.done .done-items .next .done-description .icons {
   display: none;
 }
-.done .done-items .left .done-description .description-text,
-.done .done-items .right .done-description .description-text {
+.done .done-items .last .done-description .description-text,
+.done .done-items .next .done-description .description-text {
   display: none;
 }
 @keyframes projectAnimL {
@@ -690,13 +682,13 @@ body {
     transform: translateX(0) scaleX(1);
   }
 }
-.done .done-items .left {
+.done .done-items .last {
   grid-column-start: 1;
   grid-column-end: 2;
   animation: projectAnimL 1s ease-in-out;
   transform: translateX(0) scale(1);
 }
-.done .done-items .middle {
+.done .done-items .current {
   grid-column-start: 2;
   grid-column-end: 3;
   animation: projectAnimM 1s ease-in-out;
@@ -710,7 +702,7 @@ body {
     transform: translateY(0) scaleY(1);
   }
 }
-.done .done-items .right {
+.done .done-items .next {
   grid-column-start: 3;
   grid-column-end: 4;
   animation: projectAnimL 1s ease-in-out;
@@ -819,51 +811,6 @@ body {
   color: var(--color-grey-0);
   line-height: 2rem;
   padding-bottom: 1rem;
-}
-
-.btn-con {
-  display: flex;
-  align-self: flex-start;
-}
-
-.main-btn {
-  border-radius: 30px;
-  color: inherit;
-  font-weight: 600;
-  position: relative;
-  border: 1px solid var(--color-secondary);
-  display: flex;
-  align-self: flex-start;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-.main-btn .btn-text {
-  padding: 0 2rem;
-}
-.main-btn .btn-icon {
-  background-color: var(--color-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  padding: 1rem;
-}
-.main-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(100%);
-  transition: all 0.4s ease-out;
-  z-index: -1;
-}
-.main-btn:hover::before {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-secondary);
-  transform: translateX(0);
-  transition: all 0.4s ease-out;
 }
 
 .main-title {
