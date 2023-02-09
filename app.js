@@ -9,7 +9,15 @@ function PageTransitions() {
   //Home-Touch
   document.querySelector(".left-home").ontouchstart = 
 	() => document.querySelector(".flip-box").classList.toggle("touchbtn");
-  
+  //Do-Touch
+  document.querySelector(".hvr-push").ontouchstart = 
+	function() {this.classList.toggle("touchbtn")};
+  document.querySelector(".hvr-pulse").ontouchstart = 
+	function() {this.classList.toggle("touchbtn")};
+  //Done-Touch
+  document.querySelector(".current").ontouchstart = 
+	function() {this.classList.toggle("touchbtn")};
+
   //Button click actvie class
   for (let i = 0; i < sectBtns.length; i++) {
     sectBtns[i].addEventListener("click", function () {

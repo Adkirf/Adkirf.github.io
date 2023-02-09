@@ -136,8 +136,6 @@ body {
 
 /*home Content*/
 .flip-box:hover,
-.flip-box:focus,
-.flip-box:active,
 .touchbtn {
     .flip-box-inner {
         transform: rotateY(560deg);
@@ -164,7 +162,6 @@ body {
         display: flex;
         align-items: center;
         position: relative;
-
 
         .h-shape {
             width: 50%;
@@ -333,8 +330,7 @@ body {
 }
 
 .hvr-pulse:hover,
-.hvr-pulse:focus,
-.hvr-pulse:active {
+.touchbtn {
     -webkit-animation-name: hvr-pulse;
     animation-name: hvr-pulse;
     -webkit-animation-duration: 2;
@@ -377,17 +373,8 @@ body {
     }
 }
 
-.hvr-push {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-
 .hvr-push:hover,
-.hvr-push:focus,
-.hvr-push:active {
+.touchbtn {
     -webkit-animation-name: hvr-push;
     animation-name: hvr-push;
     -webkit-animation-duration: 0.3s;
@@ -591,37 +578,7 @@ body {
 
 
 /*Done Content*/
-@-webkit-keyframes float {
 
-
-    100% {
-        -webkit-transform: translateY(-40px);
-        transform: translateY(-40px);
-    }
-}
-
-@keyframes float {
-
-
-    100% {
-        -webkit-transform: translateY(-40px);
-        transform: translateY(-40px);
-    }
-}
-
-
-.current {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
 
 .current:before {
     pointer-events: none;
@@ -641,16 +598,14 @@ body {
 }
 
 .current:hover,
-.current:focus,
-.current:active {
+.touchbtn {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
     /* move the element up by 5px */
 }
 
 .current:hover:before,
-.current:focus:before,
-.current:active:before {
+.touchbtn {
     opacity: 1;
     -webkit-transform: translateY(5px);
     transform: translateY(5px);
@@ -853,53 +808,13 @@ body {
 }
 
 /*Doing Content*/
-.hvr-radial-out {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    overflow: hidden;
-    background: #e1e1e1;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: .3s;
-    transition-duration: .3s;
-}
 
-.hvr-radial-out:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--color-secondary);
-    border-radius: 50%;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 1s;
-    transition-duration: 1s;
-    -webkit-transition-timing-function: all ease-in-out;
-    transition-timing-function: all ease-in-out;
-}
 
-.hvr-radial-out:hover,
-.hvr-radial-out:focus,
-.hvr-radial-out:active {
-    color: white;
 
-}
 
-.hvr-radial-out:hover:before,
-.hvr-radial-out:focus:before,
-.hvr-radial-out:active:before {
-    -webkit-transform: scale(2);
-    transform: scale(2);
+
+.blogs:hover, .touchbtn{
+    
 }
 
 
@@ -910,7 +825,7 @@ body {
         grid-gap: 2rem;
         margin-top: 3rem;
 
-        .hvr-radial-out {
+        .blog {
             background-color: var(--color-grey-4);
             border-radius: 5px;
             box-shadow: 1px 1px 20px rgba(0, 0, 0, .1);
@@ -918,7 +833,7 @@ body {
             display: flex;
             flex-direction: row;
 
-            &:hover {
+            &:hover, .touchbtn {
                 box-shadow: 1px 1px 30px var(--color-secondary);
                 transform: translateY(-35px);
 
@@ -964,7 +879,7 @@ body {
                     color: var(--color-grey-0);
                     font-size: 0.8rem;
                     margin-bottom: .7rem;
-                    transition: 1s ease-in;
+                    transition: .5s ease-in;
                     transform: scale(1);
                 }
 

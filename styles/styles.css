@@ -126,14 +126,10 @@ body {
 
 /*home Content*/
 .flip-box:hover .flip-box-inner,
-.flip-box:focus .flip-box-inner,
-.flip-box:active .flip-box-inner,
 .touchbtn .flip-box-inner {
   transform: rotateY(560deg);
 }
 .flip-box:hover .flip-box-inner img,
-.flip-box:focus .flip-box-inner img,
-.flip-box:active .flip-box-inner img,
 .touchbtn .flip-box-inner img {
   transition: all 2s ease-in-out;
   filter: blur(0px) !important;
@@ -275,21 +271,18 @@ body {
   }
 }
 .hvr-pulse:hover,
-.hvr-pulse:focus,
-.hvr-pulse:active {
+.touchbtn {
   animation-name: hvr-pulse;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 .hvr-pulse:hover .skill-badge,
-.hvr-pulse:focus .skill-badge,
-.hvr-pulse:active .skill-badge {
+.touchbtn .skill-badge {
   border: 0.3rem solid var(--color-secondary);
 }
 .hvr-pulse:hover .skill-name,
-.hvr-pulse:focus .skill-name,
-.hvr-pulse:active .skill-name {
+.touchbtn .skill-name {
   color: var(--color-secondary);
 }
 @keyframes hvr-push {
@@ -300,16 +293,8 @@ body {
     transform: scale(1);
   }
 }
-.hvr-push {
-  display: inline-block;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-
 .hvr-push:hover,
-.hvr-push:focus,
-.hvr-push:active {
+.touchbtn {
   animation-name: hvr-push;
   animation-duration: 0.3s;
   animation-timing-function: linear;
@@ -484,21 +469,6 @@ body {
 }
 
 /*Done Content*/
-@keyframes float {
-  100% {
-    transform: translateY(-40px);
-  }
-}
-.current {
-  display: inline-block;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  transition-duration: 0.3s;
-  transition-property: transform;
-}
-
 .current:before {
   pointer-events: none;
   position: absolute;
@@ -515,15 +485,13 @@ body {
 }
 
 .current:hover,
-.current:focus,
-.current:active {
+.touchbtn {
   transform: translateY(-5px);
   /* move the element up by 5px */
 }
 
 .current:hover:before,
-.current:focus:before,
-.current:active:before {
+.touchbtn {
   opacity: 1;
   transform: translateY(5px);
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
@@ -710,53 +678,13 @@ body {
 }
 
 /*Doing Content*/
-.hvr-radial-out {
-  display: inline-block;
-  vertical-align: middle;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  overflow: hidden;
-  background: #e1e1e1;
-  transition-property: color;
-  transition-duration: 0.3s;
-}
-
-.hvr-radial-out:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--color-secondary);
-  border-radius: 50%;
-  transform: scale(0);
-  transition-property: transform;
-  transition-duration: 1s;
-  transition-timing-function: all ease-in-out;
-}
-
-.hvr-radial-out:hover,
-.hvr-radial-out:focus,
-.hvr-radial-out:active {
-  color: white;
-}
-
-.hvr-radial-out:hover:before,
-.hvr-radial-out:focus:before,
-.hvr-radial-out:active:before {
-  transform: scale(2);
-}
-
 .doing-content .blogs {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
 }
-.doing-content .blogs .hvr-radial-out {
+.doing-content .blogs .blog {
   background-color: var(--color-grey-4);
   border-radius: 5px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
@@ -764,50 +692,50 @@ body {
   display: flex;
   flex-direction: row;
 }
-.doing-content .blogs .hvr-radial-out:hover {
+.doing-content .blogs .blog:hover, .doing-content .blogs .blog .touchbtn {
   box-shadow: 1px 1px 30px var(--color-secondary);
   transform: translateY(-35px);
 }
-.doing-content .blogs .hvr-radial-out:hover img {
+.doing-content .blogs .blog:hover img, .doing-content .blogs .blog .touchbtn img {
   filter: grayscale(0);
   transform: scale(1);
   height: 225px;
 }
-.doing-content .blogs .hvr-radial-out:hover .blog-text {
+.doing-content .blogs .blog:hover .blog-text, .doing-content .blogs .blog .touchbtn .blog-text {
   height: 225px;
 }
-.doing-content .blogs .hvr-radial-out:hover .blog-text h4 {
+.doing-content .blogs .blog:hover .blog-text h4, .doing-content .blogs .blog .touchbtn .blog-text h4 {
   font-size: 0rem;
   transition: all 0.4s ease-in-out;
   color: var(--color-grey-5);
 }
-.doing-content .blogs .hvr-radial-out:hover .blog-text p {
+.doing-content .blogs .blog:hover .blog-text p, .doing-content .blogs .blog .touchbtn .blog-text p {
   font-size: 2rem;
   color: var(--color-grey-0);
   line-height: 2.5rem;
 }
-.doing-content .blogs .hvr-radial-out img {
+.doing-content .blogs .blog img {
   height: 125px;
   -o-object-fit: contain;
      object-fit: contain;
   filter: grayscale(100%);
   transition: all 0.4s ease-in-out;
 }
-.doing-content .blogs .hvr-radial-out .blog-text {
+.doing-content .blogs .blog .blog-text {
   padding: 1rem;
   width: 100%;
   height: 125px;
   border-left: 8px solid var(--color-secondary);
   overflow: scroll;
 }
-.doing-content .blogs .hvr-radial-out .blog-text h4 {
+.doing-content .blogs .blog .blog-text h4 {
   color: var(--color-grey-0);
   font-size: 0.8rem;
   margin-bottom: 0.7rem;
-  transition: 1s ease-in;
+  transition: 0.5s ease-in;
   transform: scale(1);
 }
-.doing-content .blogs .hvr-radial-out .blog-text p {
+.doing-content .blogs .blog .blog-text p {
   color: var(--color-grey-0);
   line-height: 2rem;
   padding-bottom: 1rem;
@@ -841,7 +769,7 @@ body {
     font-size: 2.5rem !important;
   }
   .container {
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 10rem 1rem;
   }
   .theme-btn {
     opacity: 0.5;
@@ -956,62 +884,58 @@ body {
   .done {
     padding-bottom: 5rem !important;
   }
-  .switch-btn-right {
-    right: 10% !important;
-    bottom: 10% !important;
-  }
   .done-items {
     height: 400px !important;
   }
-  .done-items .left,
-  .done-items .right,
-  .done-items .middle {
+  .done-items .last,
+  .done-items .next,
+  .done-items .current {
     gap: 0rem !important;
   }
-  .done-items .left h3,
-  .done-items .right h3,
-  .done-items .middle h3 {
+  .done-items .last h3,
+  .done-items .next h3,
+  .done-items .current h3 {
     margin-top: 0rem !important;
     font-size: 0.8rem !important;
   }
-  .done-items .left .icons,
-  .done-items .right .icons,
-  .done-items .middle .icons {
+  .done-items .last .icons,
+  .done-items .next .icons,
+  .done-items .current .icons {
     height: 30px !important;
   }
-  .done-items .left .icons a,
-  .done-items .right .icons a,
-  .done-items .middle .icons a {
+  .done-items .last .icons a,
+  .done-items .next .icons a,
+  .done-items .current .icons a {
     height: 20px !important;
     width: 20px !important;
     background-color: var(--color-primary) !important;
   }
-  .done-items .left .icons a i,
-  .done-items .right .icons a i,
-  .done-items .middle .icons a i {
+  .done-items .last .icons a i,
+  .done-items .next .icons a i,
+  .done-items .current .icons a i {
     color: var(--color-secondary) !important;
     font-size: 1rem !important;
   }
-  .done-items .left .icons a:hover,
-  .done-items .right .icons a:hover,
-  .done-items .middle .icons a:hover {
+  .done-items .last .icons a:hover,
+  .done-items .next .icons a:hover,
+  .done-items .current .icons a:hover {
     background-color: var(--color-grey-5) !important;
   }
-  .done-items .middle h3 {
+  .done-items .current h3 {
     font-size: 1.25rem !important;
   }
-  .done-items .middle .description-text {
+  .done-items .current .description-text {
     font-size: 1rem !important;
     max-height: 150px !important;
   }
   .blogs {
     grid-gap: 3.5rem !important;
   }
-  .blogs .hvr-radial-out {
+  .blogs .blog {
     align-items: center;
     border-radius: 15%;
   }
-  .blogs .hvr-radial-out img {
+  .blogs .blog img {
     position: relative;
     align-items: center;
     padding-left: 5px;
@@ -1022,34 +946,34 @@ body {
     left: 0 !important;
     transition: left 1s ease-in-out !important;
   }
-  .blogs .hvr-radial-out:hover img {
+  .blogs .blog:hover img {
     transition: left 1s ease-in-out;
     left: -100px !important;
   }
-  .blogs .hvr-radial-out:hover .blog-text {
+  .blogs .blog:hover .blog-text {
     height: 400px !important;
   }
-  .blogs .hvr-radial-out:hover .blog-text h4 {
+  .blogs .blog:hover .blog-text h4 {
     transition: left 2s ease-in-out;
     left: -200px !important;
   }
-  .blogs .hvr-radial-out:hover .blog-text p {
+  .blogs .blog:hover .blog-text p {
     position: relative !important;
     font-size: 1.5rem !important;
     line-height: 1.5rem !important;
     left: 2% !important;
   }
-  .blogs .hvr-radial-out .blog-text {
+  .blogs .blog .blog-text {
     left: 0;
     height: 100px !important;
     transition: left 2s ease-in-out;
   }
-  .blogs .hvr-radial-out .blog-text h4 {
+  .blogs .blog .blog-text h4 {
     left: 0 !important;
     font-size: 0.75rem !important;
     position: relative;
   }
-  .blogs .hvr-radial-out .blog-text p {
+  .blogs .blog .blog-text p {
     line-height: 1rem !important;
   }
 }
