@@ -755,33 +755,6 @@ body {
             display: flex;
             flex-direction: row;
 
-            &:hover {
-                box-shadow: 1px 1px 30px var(--color-secondary);
-                transform: translateY(-35px);
-
-                img {
-                    filter: grayscale(0);
-                    transform: scale(1);
-                    height: 225px;
-                }
-
-                .blog-text {
-                    height: 225px;
-
-                    h4 {
-                        font-size: 0rem;
-                        transition: all 0.4s ease-in-out;
-                        color: var(--color-grey-5);
-                    }
-
-                    p {
-                        font-size: 2rem;
-                        color: var(--color-grey-0);
-                        line-height: 2.5rem;
-                    }
-                }
-            }
-
             img {
                 height: 125px;
                 object-fit: contain;
