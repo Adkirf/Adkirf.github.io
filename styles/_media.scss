@@ -1,7 +1,7 @@
 //Animations: Desktop
  @media (hover: hover) {
         //Home
-        .flip-box:hover {
+       .flip-box:hover {
             .flip-box-inner{
                 transform: rotateY(560deg);
         
@@ -10,7 +10,7 @@
                     filter: blur(0px) !important;
                 }
             }
-        }
+        } 
         //Do 
         .badge:hover{
             -webkit-animation-name: hvr-pulse;
@@ -80,16 +80,6 @@
     .home-content .right-home {
         font-size: 1rem !important;
         gap: 3.5rem !important;
-    }
-    .flip-box:hover {
-        .flip-box-inner{
-            transform: rotateY(180deg);
-    
-            img {
-                transition: all 2s ease-in-out;
-                filter: blur(0px) !important;
-            }
-        }
     }
 
 }

@@ -20,6 +20,7 @@ function PageTransitions() {
   document.querySelector(".left-home").addEventListener("touchstart",()=>{
     document.querySelector(".flip-box").classList.toggle("switchAdkirf");
   });
+
   //Do-Touch
   document.querySelectorAll(".do-item").forEach((e)=>addTouchAnimation(e,function(e){
     e.classList.add("pushDo");
