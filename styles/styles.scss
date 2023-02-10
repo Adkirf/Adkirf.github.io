@@ -530,18 +530,6 @@ body {
 /*Done Content*/
 
 
-.current:before {
-
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 5%;
-    height: 10px;
-    width: 90%;
-    background: var(--box-shadow-1);
-
-}
-
 .switch-btn {
     position: fixed;
     bottom: 12.5%;
@@ -711,7 +699,17 @@ body {
             grid-column-end: 3;
             animation: projectAnimM 1s ease-in-out;
             transform: translateX(0) scale(1);
+            &:before {
 
+                position: absolute;
+                content: '';
+                top: 100%;
+                left: 5%;
+                height: 10px;
+                width: 90%;
+                background: var(--box-shadow-1);
+            
+            }
 
             @keyframes projectAnimM {
                 0% {
@@ -757,7 +755,7 @@ body {
             display: flex;
             flex-direction: row;
 
-            &:hover, .touchbtn {
+            &:hover {
                 box-shadow: 1px 1px 30px var(--color-secondary);
                 transform: translateY(-35px);
 

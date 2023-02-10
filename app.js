@@ -38,8 +38,6 @@ function PageTransitions() {
   //Done-Touch
 
   //Done-Touch
-  document.querySelector(".current").ontouchstart = 
-	function() {this.classList.toggle("touchbtn")};
 
   //Button click actvie class
   for (let i = 0; i < sectBtns.length; i++) {

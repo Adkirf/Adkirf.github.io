@@ -434,16 +434,6 @@ body {
 }
 
 /*Done Content*/
-.current:before {
-  position: absolute;
-  content: "";
-  top: 100%;
-  left: 5%;
-  height: 10px;
-  width: 90%;
-  background: var(--box-shadow-1);
-}
-
 .switch-btn {
   position: fixed;
   bottom: 12.5%;
@@ -609,6 +599,15 @@ body {
   animation: projectAnimM 1s ease-in-out;
   transform: translateX(0) scale(1);
 }
+.done .done-items .current:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  background: var(--box-shadow-1);
+}
 @keyframes projectAnimM {
   0% {
     transform: translateX(0) scaleX(-100%);
@@ -639,24 +638,24 @@ body {
   display: flex;
   flex-direction: row;
 }
-.doing-content .blogs .blog:hover, .doing-content .blogs .blog .touchbtn {
+.doing-content .blogs .blog:hover {
   box-shadow: 1px 1px 30px var(--color-secondary);
   transform: translateY(-35px);
 }
-.doing-content .blogs .blog:hover img, .doing-content .blogs .blog .touchbtn img {
+.doing-content .blogs .blog:hover img {
   filter: grayscale(0);
   transform: scale(1);
   height: 225px;
 }
-.doing-content .blogs .blog:hover .blog-text, .doing-content .blogs .blog .touchbtn .blog-text {
+.doing-content .blogs .blog:hover .blog-text {
   height: 225px;
 }
-.doing-content .blogs .blog:hover .blog-text h4, .doing-content .blogs .blog .touchbtn .blog-text h4 {
+.doing-content .blogs .blog:hover .blog-text h4 {
   font-size: 0rem;
   transition: all 0.4s ease-in-out;
   color: var(--color-grey-5);
 }
-.doing-content .blogs .blog:hover .blog-text p, .doing-content .blogs .blog .touchbtn .blog-text p {
+.doing-content .blogs .blog:hover .blog-text p {
   font-size: 2rem;
   color: var(--color-grey-0);
   line-height: 2.5rem;
@@ -965,10 +964,10 @@ body {
     animation-iteration-count: infinite;
   }
   .pulseBadge .skill-badge {
-    border: 0.3rem solid var(--color-secondary);
+    border: 0.3rem solid var(--color-secondary) !important;
   }
   .pulseBadge .skill-name {
-    color: var(--color-secondary);
+    color: var(--color-secondary) !important;
   }
   .pushDo {
     animation-name: hvr-push;

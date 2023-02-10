@@ -345,11 +345,11 @@
         animation-iteration-count: infinite;
 
         .skill-badge {
-            border: 0.3rem solid var(--color-secondary);
+            border: 0.3rem solid var(--color-secondary)!important;
         }
 
         .skill-name {
-            color: var(--color-secondary);
+            color: var(--color-secondary)!important;
         }
     }
     .pushDo{
