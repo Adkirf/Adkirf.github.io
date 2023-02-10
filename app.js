@@ -17,7 +17,9 @@ function addTouchAnimation(element, callback){
 
 function PageTransitions() {
   //Home-Touch
-  addTouchAnimation(document.querySelector(".flip-box"),(e)=>{e.classList.toggle("switchAdkirf")} );
+  document.querySelector(".left-home").addEventListener("touchstart",()=>{
+    document.querySelector(".flip-box").classList.toggle("switchAdkirf");
+  });
   //Do-Touch
   document.querySelectorAll(".do-item").forEach((e)=>addTouchAnimation(e,function(e){
     e.classList.add("pushDo");
