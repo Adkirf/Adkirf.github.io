@@ -21,13 +21,22 @@ function PageTransitions() {
     document.querySelector(".flip-box").classList.toggle("switchAdkirf");
   ;
   //Do-Touch
+  document.querySelector(".do-item").addEventListener("touchstart",(touch)=>{
+    touch.classList.add("pushDo");
+    setTimeout(()=>{touch.classList.remove("pushDo")},"1000");
+  });
   document.querySelectorAll(".do-item").forEach((e)=>{
     e.addEventListener("touchstart",(touched)=>{
       touched.classList.add("pushDo");
       setTimeout(()=>{touched.classList.remove("pushDo")},"1000");
     });
   });
-  
+  document.querySelectorAll(".badge").forEach((e)=>{
+    e.addEventListener("touchstart",(touched)=>{
+      touched.classList.toggle("pulseBadge");
+    });
+  });
+  //Done-Touch
 
   //Done-Touch
   document.querySelector(".current").ontouchstart = 
