@@ -347,7 +347,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
 
-        .hvr-push {
+        .do-item {
             border-radius: 5%;
             transition: all .4s ease-in-out;
             box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
@@ -430,7 +430,7 @@ body {
         display: flex;
         flex-direction: row;
 
-        .hvr-pulse {
+        .badge {
             margin-top: 3rem;
             display: flex;
             align-items: center;

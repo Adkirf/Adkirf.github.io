@@ -278,23 +278,23 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 }
-.do-container .right-do .hvr-push {
+.do-container .right-do .do-item {
   border-radius: 5%;
   transition: all 0.4s ease-in-out;
   box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
   border: solid var(--color-secondary);
 }
-.do-container .right-do .hvr-push .do-text {
+.do-container .right-do .do-item .do-text {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
-.do-container .right-do .hvr-push .do-text .large-text {
+.do-container .right-do .do-item .do-text .large-text {
   font-size: 1.5rem;
   font-weight: 450;
   color: var(--color-secondary);
 }
-.do-container .right-do .hvr-push .do-text .small-text {
+.do-container .right-do .do-item .do-text .small-text {
   padding-left: 1rem;
   position: relative;
   text-transform: uppercase;
@@ -302,7 +302,7 @@ body {
   color: var(--color-grey-1);
   letter-spacing: 2px;
 }
-.do-container .right-do .hvr-push .do-text .small-text::before {
+.do-container .right-do .do-item .do-text .small-text::before {
   content: "";
   left: 0;
   top: 15px;
@@ -350,20 +350,20 @@ body {
   display: flex;
   flex-direction: row;
 }
-.do-badges .badges .hvr-pulse {
+.do-badges .badges .badge {
   margin-top: 3rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
 }
-.do-badges .badges .hvr-pulse .skill-name {
+.do-badges .badges .badge .skill-name {
   color: var(--color-grey-2);
   text-align: center;
   padding-bottom: 1rem;
   font-size: 1.5rem;
 }
-.do-badges .badges .hvr-pulse .skill-badge {
+.do-badges .badges .badge .skill-badge {
   background-color: var(--color-grey-1);
   width: 75px;
   height: 100px;
@@ -373,7 +373,7 @@ body {
   align-items: center;
   box-shadow: var(--boxshadow-1);
 }
-.do-badges .badges .hvr-pulse .skill-badge i {
+.do-badges .badges .badge .skill-badge i {
   color: var(--color-secondary);
   font-size: 1.75rem;
   font-weight: 1000;
@@ -728,19 +728,19 @@ body {
     transition: all 2s ease-in-out;
     filter: blur(0px) !important;
   }
-  .hvr-pulse:hover {
+  .badge:hover {
     animation-name: hvr-pulse;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
-  .hvr-pulse:hover .skill-badge {
+  .badge:hover .skill-badge {
     border: 0.3rem solid var(--color-secondary) !important;
   }
-  .hvr-pulse:hover .skill-name {
+  .badge:hover .skill-name {
     color: var(--color-secondary) !important;
   }
-  .hvr-push:hover {
+  .do-item:hover {
     animation-name: hvr-push;
     animation-duration: 0.3s;
     animation-timing-function: linear;
@@ -829,13 +829,13 @@ body {
   .do-container .left-do {
     padding: 0rem !important;
   }
-  .do-container .right-do .hvr-push .do-text {
+  .do-container .right-do .do-item .do-text {
     padding: 0.75rem;
   }
-  .do-container .right-do .hvr-push .do-text .large-text {
+  .do-container .right-do .do-item .do-text .large-text {
     font-size: 1.2rem;
   }
-  .do-container .right-do .hvr-push .do-text .small-text {
+  .do-container .right-do .do-item .do-text .small-text {
     font-size: 1rem;
   }
   .do-badges {
@@ -1003,7 +1003,7 @@ body {
   .do-container .left-do p {
     font-size: 0.8rem;
   }
-  .do-container .right-do .hvr-push .do-text .small-text {
+  .do-container .right-do .do-item .do-text .small-text {
     font-size: 0.75rem;
   }
   .myway .myway-item .mw-duration {

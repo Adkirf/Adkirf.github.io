@@ -10,18 +10,10 @@ function addGlobalEventListener(type, selector, callback){
     if(e.target.matches(selector)) callback(e);
   });
 }
-function addTouchAnimation(element, callback){
-  document.addEventListener("touchstart", (e) => {
-    if(e.target.matches(element)){
-      callback(e);
-    }
-  });
+function addTouchAnimationStatic(element, callback){
+  element.addEventListener("touchstart",(e) =>callback(e));
 }
-function addClickListener(element, callback){
-  document.addEventListener("click", (e) => {
 
-  });
-}
 
 function PageTransitions() {
   //Home-Touch
@@ -29,21 +21,13 @@ function PageTransitions() {
     document.querySelector(".flip-box").classList.toggle("switchAdkirf");
   ;
   //Do-Touch
-
-  addTouchAnimation(".hvr-push",(e)=>{
-    e.classList.add("pushDo");
-    setTimeout(()=>{e.classList.remove("pushDo")},"1000");
+  document.querySelectorAll(".do-item").forEach((e)=>{
+    e.addEventListener("touchstart",(touched)=>{
+      touched.classList.add("pushDo");
+      setTimeout(()=>{touched.classList.remove("pushDo")},"1000");
+    });
   });
-/*   document.querySelector(".hvr-push").addEventListener("touchstart",function(){
-    let e = this;
-    e.classList.add("pushDo");
-    setTimeout(()=>{e.classList.remove("pushDo")},"1000");
-  }); */
-
-/*   document.querySelector(".hvr-pulse").ontouchstart = 
-	function(e) {e.classList.toggle("pulseBadge")}; */
-
-  addTouchAnimation(".hvr-pulse",(e)=>{e.classList.toggle("pulseBadge")});
+  
 
   //Done-Touch
   document.querySelector(".current").ontouchstart = 

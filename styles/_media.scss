@@ -12,7 +12,7 @@
         }
     }
     //Do 
-    .hvr-pulse:hover{
+    .badge:hover{
         -webkit-animation-name: hvr-pulse;
         animation-name: hvr-pulse;
         -webkit-animation-duration: 2s;
@@ -30,7 +30,7 @@
             color: var(--color-secondary)!important;
         }
     }
-    .hvr-push:hover {
+    .do-item:hover {
         -webkit-animation-name: hvr-push;
         animation-name: hvr-push;
         -webkit-animation-duration: 0.3s;
@@ -152,7 +152,7 @@
         }
 
         .right-do {
-            .hvr-push {
+            .do-item {
                 .do-text {
                     padding: .75rem;
 
@@ -379,7 +379,7 @@
         font-size: .8rem
     }
 
-    .do-container .right-do .hvr-push .do-text .small-text {
+    .do-container .right-do .do-item .do-text .small-text {
         font-size: .75rem;
     }
 
