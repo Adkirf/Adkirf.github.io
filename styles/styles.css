@@ -266,14 +266,6 @@ body {
     transform: scale(1);
   }
 }
-.hvr-push:hover,
-.touchbtn {
-  animation-name: hvr-push;
-  animation-duration: 0.3s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-}
-
 .do-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -748,6 +740,12 @@ body {
   .hvr-pulse:hover .skill-name {
     color: var(--color-secondary) !important;
   }
+  .hvr-push:hover {
+    animation-name: hvr-push;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
 }
 @media screen and (max-width: 1100px) {
   .home-content .left-home .flip-box-back .animate-charcter {
@@ -775,12 +773,6 @@ body {
     height: 10%;
     width: 100%;
     gap: 2rem;
-  }
-  .switchAdkirf .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  .switchAdkirf .flip-box-inner img {
-    transition: all 1s ease-in-out;
   }
   .home-content {
     display: grid;
@@ -851,18 +843,6 @@ body {
   }
   .do-badges .badges {
     flex-direction: column;
-  }
-  .do-badges .badges .pulseBadge {
-    animation-name: hvr-pulse;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-  }
-  .do-badges .badges .pulseBadge .skill-badge {
-    border: 0.3rem solid var(--color-secondary);
-  }
-  .do-badges .badges .pulseBadge .skill-name {
-    color: var(--color-secondary);
   }
   .myway {
     padding-right: 0rem;
@@ -981,6 +961,30 @@ body {
   }
   .blogs .blog .blog-text p {
     line-height: 1rem !important;
+  }
+  .switchAdkirf .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  .switchAdkirf .flip-box-inner img {
+    transition: all 1s ease-in-out;
+  }
+  .pulseBadge {
+    animation-name: hvr-pulse;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .pulseBadge .skill-badge {
+    border: 0.3rem solid var(--color-secondary);
+  }
+  .pulseBadge .skill-name {
+    color: var(--color-secondary);
+  }
+  .pushDo {
+    animation-name: hvr-push;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
   }
 }
 @media screen and (max-width: 475px) {

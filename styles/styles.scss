@@ -287,6 +287,7 @@ body {
 
 /*Do Content*/
 @-webkit-keyframes hvr-pulse {
+  
     25% {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
@@ -310,8 +311,6 @@ body {
     }
 }
 
-
-
 @-webkit-keyframes hvr-push {
     50% {
         -webkit-transform: scale(0.8);
@@ -334,18 +333,6 @@ body {
         -webkit-transform: scale(1);
         transform: scale(1);
     }
-}
-
-.hvr-push:hover,
-.touchbtn {
-    -webkit-animation-name: hvr-push;
-    animation-name: hvr-push;
-    -webkit-animation-duration: 0.3s;
-    animation-duration: 0.3s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
 }
 
 .do-container {

@@ -5,13 +5,25 @@ const rightSwitch = document.querySelectorAll(".switch-btn")[0];
 const leftSwitch = document.querySelectorAll(".switch-btn")[1];
 const doneItems = document.querySelectorAll(".done-item");
 
+function addGlobalEventListener(type, selector, callback){
+  document.addEventListener(type, e => {
+    if(e.target.matches(selector)) callback(e);
+  });
+}
+function addGlobalTouchStart(type, selector, toToggle){
+  type.ontouchstart = () => selector.classList.toggle(toToggle);
+}
+
 function PageTransitions() {
   //Home-Touch
   document.querySelectorAll(".flip-box").ontouchstart = () => 
     document.querySelector(".flip-box").classList.toggle("switchAdkirf");
   ;
   //Do-Touch
-  //document.querySelector(".right-do").ontouchstart = 
+  document.querySelector(".hvr-push").addEventListener("touchstart",function(){
+    this.classList.toggle("pushDo");
+  });
+  //addGlobalEvenListener('touchstart','.hvr-push',this.classList.add("pushDo"));
   document.querySelector(".hvr-pulse").ontouchstart = 
 	function() {this.classList.toggle("pulseBadge")};
   //Done-Touch
