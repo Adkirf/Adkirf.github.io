@@ -11,30 +11,40 @@ function addGlobalEventListener(type, selector, callback){
   });
 }
 function addTouchAnimation(element, callback){
-  document.addEventListener("touchstart", e => {
+  document.addEventListener("touchstart", (e) => {
     if(e.target.matches(element)){
       callback(e);
     }
   });
 }
+function addClickListener(element, callback){
+  document.addEventListener("click", (e) => {
+
+  });
+}
 
 function PageTransitions() {
   //Home-Touch
-  document.querySelectorAll(".flip-box").ontouchstart = () => 
+  document.querySelector(".flip-box").ontouchstart = () => 
     document.querySelector(".flip-box").classList.toggle("switchAdkirf");
   ;
   //Do-Touch
-  document.querySelector(".hvr-push").addEventListener("touchstart",function(){
-    let e = this;
+
+  addTouchAnimation(".hvr-push",(e)=>{
     e.classList.add("pushDo");
     setTimeout(()=>{e.classList.remove("pushDo")},"1000");
   });
+/*   document.querySelector(".hvr-push").addEventListener("touchstart",function(){
+    let e = this;
+    e.classList.add("pushDo");
+    setTimeout(()=>{e.classList.remove("pushDo")},"1000");
+  }); */
 
 /*   document.querySelector(".hvr-pulse").ontouchstart = 
 	function(e) {e.classList.toggle("pulseBadge")}; */
 
   addTouchAnimation(".hvr-pulse",(e)=>{e.classList.toggle("pulseBadge")});
-  
+
   //Done-Touch
   document.querySelector(".current").ontouchstart = 
 	function() {this.classList.toggle("touchbtn")};
