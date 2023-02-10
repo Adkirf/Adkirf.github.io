@@ -13,6 +13,13 @@ function addGlobalEventListener(type, selector, callback){
 function addTouchAnimationStatic(element, callback){
   element.addEventListener("touchstart",(e) =>callback(e));
 }
+function addTouchAnimation(element, callback){
+  document.addEventListener("touchstart",e=>{
+    if(element.contains(e.target)){
+      callback(element);
+    }
+  });
+}
 
 
 function PageTransitions() {
@@ -21,16 +28,11 @@ function PageTransitions() {
     document.querySelector(".flip-box").classList.toggle("switchAdkirf");
   ;
   //Do-Touch
-  document.querySelector(".do-item").addEventListener("touchstart",(touch)=>{
-    touch.classList.add("pushDo");
-    setTimeout(()=>{touch.classList.remove("pushDo")},"1000");
+  addTouchAnimation(document.querySelector(".do-item"),function(e){
+    e.classList.add("pushDo");
+    setTimeout(()=>{e.classList.remove("pushDo")},"1000");
   });
-  document.querySelectorAll(".do-item").forEach((e)=>{
-    e.addEventListener("touchstart",(touched)=>{
-      touched.classList.add("pushDo");
-      setTimeout(()=>{touched.classList.remove("pushDo")},"1000");
-    });
-  });
+
   document.querySelectorAll(".badge").forEach((e)=>{
     e.addEventListener("touchstart",(touched)=>{
       touched.classList.toggle("pulseBadge");

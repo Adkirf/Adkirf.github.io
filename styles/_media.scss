@@ -321,6 +321,7 @@
 
             img {
                 transition: all 1s ease-in-out;
+                filter: blur(0px) !important;
             }
         }
     }

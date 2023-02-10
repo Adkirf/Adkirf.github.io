@@ -444,14 +444,6 @@ body {
   background: var(--box-shadow-1);
 }
 
-.current:hover {
-  /* move the element up by 5px */
-}
-
-.current:hover:before {
-  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
-}
-
 .switch-btn {
   position: fixed;
   bottom: 12.5%;
@@ -957,6 +949,7 @@ body {
   }
   .switchAdkirf .flip-box-inner img {
     transition: all 1s ease-in-out;
+    filter: blur(0px) !important;
   }
   .pulseBadge {
     animation-name: hvr-pulse;
