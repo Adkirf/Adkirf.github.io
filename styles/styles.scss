@@ -135,7 +135,7 @@ body {
 
 
 /*home Content*/
-.flip-box:hover {
+ .flip-box:hover {
     .flip-box-inner{
         transform: rotateY(560deg);
 
@@ -152,7 +152,8 @@ body {
     }
 }
 
-.home-content {
+
+ .home-content {
     font-family: 'Poppings', sans-serif;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -171,8 +172,7 @@ body {
             top: 10%;
             clip-path: polygon(0 0, 76% 0, 100% 100%, 0% 100%);
         }
-
-        .flip-box {
+         .flip-box {
             height: 80%;
             width: 50%;
             perspective: 1500px;
@@ -192,8 +192,6 @@ body {
             transition: transform 2s;
             transform-style: preserve-3d;
         }
-
-
 
         .flip-box-front,
         .flip-box-back {
@@ -218,7 +216,7 @@ body {
             }
         }
 
-        .flip-box-back,.touchbtn {
+        .flip-box-back {
             transform: rotateY(180deg);
 
             img {
@@ -258,12 +256,7 @@ body {
                 }
             }
         }
-
-        /* Style the front side (fallback if image is missing) */
-
-
-        /* Style the back side */
-
+ 
     }
 
     .right-home {

@@ -7,9 +7,9 @@ const doneItems = document.querySelectorAll(".done-item");
 
 function PageTransitions() {
   //Home-Touch
-  document.querySelectorAll(".left-home").ontouchstart = () => {
+  document.querySelectorAll(".flip-box").ontouchstart = () => 
     document.querySelector(".flip-box").classList.toggle("switchAdkirf");
-  };
+  ;
   //Do-Touch
   //document.querySelector(".right-do").ontouchstart = 
   document.querySelector(".hvr-pulse").ontouchstart = 

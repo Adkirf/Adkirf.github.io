@@ -41,7 +41,16 @@
 
 
     //Home Content
-    .flip-box:hover, .switchAdkirf  {
+    .flip-box:hover  {
+        .flip-box-inner{
+            transform: rotateY(180deg);
+
+            img {
+                transition: all 1s ease-in-out;
+            }
+        }
+    }
+    .switchAdkirf{
         .flip-box-inner{
             transform: rotateY(180deg);
 
