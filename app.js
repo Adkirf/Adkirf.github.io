@@ -5,11 +5,6 @@ const rightSwitch = document.querySelectorAll(".switch-btn")[0];
 const leftSwitch = document.querySelectorAll(".switch-btn")[1];
 const doneItems = document.querySelectorAll(".done-item");
 
-function addGlobalEventListener(type, selector, callback){
-  document.addEventListener(type, e => {
-    if(e.target.matches(selector)) callback(e);
-  });
-}
 
 function addTouchAnimation(element, callback){
   document.addEventListener("touchstart",e=>{
@@ -22,7 +17,7 @@ function addTouchAnimation(element, callback){
 
 function PageTransitions() {
   //Home-Touch
-  addTouchAnimation(document.querySelector(".flip-box"),(e)=>{e.classList.toggle("switchAdkirf")} );
+/*   addTouchAnimation(document.querySelector(".flip-box"),(e)=>{e.classList.toggle("switchAdkirf")} );
   //Do-Touch
   document.querySelectorAll(".do-item").forEach((e)=>addTouchAnimation(e,function(e){
     e.classList.add("pushDo");
@@ -37,7 +32,7 @@ function PageTransitions() {
   document.querySelectorAll("blog").forEach((e)=>addTouchAnimation(e,(e)=>{
     e.classList.toggle("focusBlog");
   }));
-
+ */
   //Button click actvie class
   for (let i = 0; i < sectBtns.length; i++) {
     sectBtns[i].addEventListener("click", function () {
