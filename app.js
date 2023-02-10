@@ -32,12 +32,6 @@ function PageTransitions() {
   //Doing-Touch
   document.querySelectorAll(".blog").forEach((e)=>addTouchAnimation(e,(e)=>{
     e.classList.toggle("focusBlog");
-    slider.ontouch = function (evt) {
-      evt.preventDefault();
-      evt.stopPropagation();
-      slider.style.animationPlayState = "paused";
-      document.querySelector(".progress-bar").style.animationPlayState = "paused";
-    }
   }));
  
 
