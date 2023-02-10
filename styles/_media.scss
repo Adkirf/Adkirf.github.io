@@ -1,3 +1,25 @@
+@media (hover: hover) {
+    .hvr-pulse:hover{
+        -webkit-animation-name: hvr-pulse;
+        animation-name: hvr-pulse;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    
+        .skill-badge {
+            border: 0.3rem solid var(--color-secondary)!important;
+        }
+    
+        .skill-name {
+            color: var(--color-secondary)!important;
+        }
+    }
+}
+
+
 @media screen and (max-width: 1100px) {
 
     //Home Content
