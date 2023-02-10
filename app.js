@@ -30,13 +30,16 @@ function PageTransitions() {
     e.classList.toggle("pulseBadge");
   }));
   //Doing-Touch
-  document.querySelectorAll("blog").forEach((e)=>addTouchAnimation(e,(e)=>{
+  document.querySelectorAll(".blog").forEach((e)=>addTouchAnimation(e,(e)=>{
     e.classList.toggle("focusBlog");
+    slider.ontouch = function (evt) {
+      evt.preventDefault();
+      evt.stopPropagation();
+      slider.style.animationPlayState = "paused";
+      document.querySelector(".progress-bar").style.animationPlayState = "paused";
+    }
   }));
-  document.querySelector(".blog").addEventListener("click",(e)=>{
-    document.querySelector(".blog").classList.toggle("focusBlog");
-    console.log("hi");
-  });
+ 
 
   //Button click actvie class
   for (let i = 0; i < sectBtns.length; i++) {
