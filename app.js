@@ -33,6 +33,10 @@ function PageTransitions() {
   document.querySelectorAll("blog").forEach((e)=>addTouchAnimation(e,(e)=>{
     e.classList.toggle("focusBlog");
   }));
+  document.querySelector(".blog").addEventListener("click",(e)=>{
+    document.querySelector(".blog").classList.toggle("focusBlog");
+    console.log("hi");
+  });
 
   //Button click actvie class
   for (let i = 0; i < sectBtns.length; i++) {

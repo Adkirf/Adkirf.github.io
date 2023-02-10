@@ -1,7 +1,7 @@
 //Animations: Desktop
- @media (hover: hover) {
+  @media (hover: hover) {
         //Home
-       .flip-box:hover {
+        .flip-box:hover {
             .flip-box-inner{
                 transform: rotateY(560deg);
         
@@ -40,34 +40,45 @@
             -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
         }
+        //Done
+        .done-items{
+            .current{
+                .icons{
+                    a{
+                        &:hover {
+                            background-color: var(--color-secondary)!important;
+                        } 
+                    }
+                }
+            }
+        }
         //Doing
         .blog:hover {
-            box-shadow: 1px 1px 30px var(--color-secondary);
+            box-shadow: 1px 1px 30px var(--color-secondary)!important;
             transform: translateY(-35px);
     
             img {
-                filter: grayscale(0);
+                filter: grayscale(0)!important;
                 transform: scale(1);
-                height: 225px;
+                height: 225px!important;
             }
     
             .blog-text {
-                height: 225px;
+                height: 225px!important;
     
                 h4 {
-                    font-size: 0rem;
+                    font-size: 0rem!important;
                     transition: all 0.4s ease-in-out;
                     color: var(--color-grey-5);
                 }
     
                 p {
                     font-size: 2rem;
-                    color: var(--color-grey-0);
-                    line-height: 2.5rem;
+                    line-height: 2.5rem!important;
                 }
             }
         }
-} 
+}  
 
 //Breakpoints: Desktop
 @media screen and (max-width: 1100px) {
@@ -86,8 +97,8 @@
 
 //Animations & Breakpoints mobile
 @media screen and (max-width: 800px) {
-        //Animations
-        .switchAdkirf{
+    //Animations
+    .switchAdkirf{
             .flip-box-inner{
                 transform: rotateY(180deg);
     
@@ -129,29 +140,28 @@
             animation-iteration-count: 1;
         }
         .focusBlog{
-            box-shadow: 1px 1px 30px var(--color-secondary);
+            box-shadow: 1px 1px 30px var(--color-secondary)!important;
             transform: translateY(-35px);
-    
+
             img {
-                filter: grayscale(0);
-                transform: scale(1);
-                height: 225px;
+                transition: left 1s ease-in-out;
+                left: -100px !important;
             }
-    
+
             .blog-text {
-                height: 225px;
-    
+                height: 400px !important;
+
                 h4 {
-                    font-size: 0rem;
-                    transition: all 0.4s ease-in-out;
-                    color: var(--color-grey-5);
+                    transition: left 2s ease-in-out;
+                    left: -200px !important;
                 }
-    
+
                 p {
-                    font-size: 2rem;
-                    color: var(--color-grey-0);
-                    line-height: 2.5rem;
+                    position: relative !important;
+                    font-size: 1.5rem !important;
+                    left: 2% !important;
                 }
+
             }
         }
     
@@ -329,10 +339,7 @@
                         color: var(--color-secondary) !important;
                         font-size: 1rem !important;
                     }
-
-                    &:hover {
-                        background-color: var(--color-grey-5) !important;
-                    }
+                    
                 }
             }
         }
@@ -349,11 +356,9 @@
         }
     }
     .blogs {
-        grid-gap: 3.5rem !important;
 
         .blog {
             align-items: center;
-            border-radius: 15%;
 
             img {
                 position: relative;
@@ -361,51 +366,25 @@
                 padding-left: 5px;
                 padding-right: 5px;
                 height: 50px !important;
-                width: 50px !important;
-                border-radius: 50%;
-                left: 0 !important;
-                transition: left 1s ease-in-out !important;
+                left: 0 ;
+                filter: grayscale(0)!important;
+                transition: left 1s ease-in-out ;
+                border-radius: 50%!important;  
 
             }
-
-            &:hover {
-                img {
-                    transition: left 1s ease-in-out;
-                    left: -100px !important;
-                }
-
-                .blog-text {
-                    height: 400px !important;
-
-                    h4 {
-                        transition: left 2s ease-in-out;
-                        left: -200px !important;
-                    }
-
-                    p {
-                        position: relative !important;
-                        font-size: 1.5rem !important;
-                        line-height: 1.5rem !important;
-                        left: 2% !important;
-                    }
-
-                }
-
-            }
-
             .blog-text {
                 left: 0;
-                height: 100px !important;
+                height: 100px ;
                 transition: left 2s ease-in-out;
 
                 h4 {
-                    left: 0 !important;
-                    font-size: 0.75rem !important;
+                    left: 0 ;
+                    font-size: 0.75rem ;
                     position: relative;
                 }
 
                 p {
-                    line-height: 1rem !important;
+                    line-height: 1.5rem !important;
                 }
             }
         }
