@@ -125,14 +125,6 @@ body {
 }
 
 /*home Content*/
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(560deg);
-}
-.flip-box:hover .flip-box-inner img {
-  transition: all 2s ease-in-out;
-  filter: blur(0px) !important;
-}
-
 @keyframes textclip {
   to {
     background-position: 200% center;
@@ -737,6 +729,13 @@ body {
 }
 
 @media (hover: hover) {
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(560deg);
+  }
+  .flip-box:hover .flip-box-inner img {
+    transition: all 2s ease-in-out;
+    filter: blur(0px) !important;
+  }
   .hvr-pulse:hover {
     animation-name: hvr-pulse;
     animation-duration: 2s;
@@ -776,12 +775,6 @@ body {
     height: 10%;
     width: 100%;
     gap: 2rem;
-  }
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  .flip-box:hover .flip-box-inner img {
-    transition: all 1s ease-in-out;
   }
   .switchAdkirf .flip-box-inner {
     transform: rotateY(180deg);

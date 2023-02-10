@@ -1,4 +1,15 @@
 @media (hover: hover) {
+    .flip-box:hover {
+        .flip-box-inner{
+            transform: rotateY(560deg);
+    
+            img {
+                transition: all 2s ease-in-out;
+                filter: blur(0px) !important;
+            }
+        }
+    }
+
     .hvr-pulse:hover{
         -webkit-animation-name: hvr-pulse;
         animation-name: hvr-pulse;
@@ -63,15 +74,6 @@
 
 
     //Home Content
-    .flip-box:hover  {
-        .flip-box-inner{
-            transform: rotateY(180deg);
-
-            img {
-                transition: all 1s ease-in-out;
-            }
-        }
-    }
     .switchAdkirf{
         .flip-box-inner{
             transform: rotateY(180deg);

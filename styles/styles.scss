@@ -135,17 +135,6 @@ body {
 
 
 /*home Content*/
- .flip-box:hover {
-    .flip-box-inner{
-        transform: rotateY(560deg);
-
-        img {
-            transition: all 2s ease-in-out;
-            filter: blur(0px) !important;
-        }
-    }
-}
-
 @keyframes textclip {
     to {
         background-position: 200% center;
