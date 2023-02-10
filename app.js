@@ -10,9 +10,7 @@ function addGlobalEventListener(type, selector, callback){
     if(e.target.matches(selector)) callback(e);
   });
 }
-function addTouchAnimationStatic(element, callback){
-  element.addEventListener("touchstart",(e) =>callback(e));
-}
+
 function addTouchAnimation(element, callback){
   document.addEventListener("touchstart",e=>{
     if(element.contains(e.target)){
@@ -39,7 +37,7 @@ function PageTransitions() {
   document.querySelectorAll("blog").forEach((e)=>addTouchAnimation(e,(e)=>{
     e.classList.toggle("focusBlog");
   }));
-  
+
   //Button click actvie class
   for (let i = 0; i < sectBtns.length; i++) {
     sectBtns[i].addEventListener("click", function () {
