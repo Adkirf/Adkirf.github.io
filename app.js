@@ -24,25 +24,17 @@ function addTouchAnimation(element, callback){
 
 function PageTransitions() {
   //Home-Touch
-  document.querySelector(".flip-box").ontouchstart = () => 
-    document.querySelector(".flip-box").classList.toggle("switchAdkirf");
-  ;
+  document.querySelector(".flip-box").ontouchstart = () => document.querySelector(".flip-box").classList.toggle("switchAdkirf");
+  
   //Do-Touch
-  addTouchAnimation(document.querySelector(".do-item"),function(e){
-    e.classList.add("pushDo");
-    setTimeout(()=>{e.classList.remove("pushDo")},"1000");
-  });
-
-  document.querySelectorAll(".do-items").forEach((e)=>addTouchAnimation(e,(e)=>{
+  document.querySelectorAll(".do-item").forEach((e)=>addTouchAnimation(e,function(e){
     e.classList.add("pushDo");
     setTimeout(()=>{e.classList.remove("pushDo")},"1000");
   }));
 
-  document.querySelectorAll(".badge").forEach((e)=>{
-    e.addEventListener("touchstart",(touched)=>{
-      touched.classList.toggle("pulseBadge");
-    });
-  });
+  document.querySelectorAll(".badge").forEach((e)=>addTouchAnimation(e,(e)=>{
+    e.classList.toggle("pulseBadge");
+  }));
   //Done-Touch
 
   //Done-Touch

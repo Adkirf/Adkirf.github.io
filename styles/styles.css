@@ -737,6 +737,13 @@ body {
     font-size: 1rem !important;
     gap: 3.5rem !important;
   }
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-box:hover .flip-box-inner img {
+    transition: all 2s ease-in-out;
+    filter: blur(0px) !important;
+  }
 }
 @media screen and (max-width: 800px) {
   .main-title h2 {
