@@ -17,22 +17,20 @@ function addTouchAnimation(element, callback){
 
 function PageTransitions() {
   //Home-Touch
-/*   addTouchAnimation(document.querySelector(".flip-box"),(e)=>{e.classList.toggle("switchAdkirf")} );
+  addTouchAnimation(document.querySelector(".flip-box"),(e)=>{e.classList.toggle("switchAdkirf")} );
   //Do-Touch
   document.querySelectorAll(".do-item").forEach((e)=>addTouchAnimation(e,function(e){
     e.classList.add("pushDo");
     setTimeout(()=>{e.classList.remove("pushDo")},"1000");
   }));
-
   document.querySelectorAll(".badge").forEach((e)=>addTouchAnimation(e,(e)=>{
     e.classList.toggle("pulseBadge");
   }));
- 
   //Doing-Touch
   document.querySelectorAll("blog").forEach((e)=>addTouchAnimation(e,(e)=>{
     e.classList.toggle("focusBlog");
   }));
- */
+
   //Button click actvie class
   for (let i = 0; i < sectBtns.length; i++) {
     sectBtns[i].addEventListener("click", function () {

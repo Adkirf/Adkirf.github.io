@@ -5,57 +5,6 @@
   list-style: none;
 }
 
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(560deg);
-}
-.flip-box:hover .flip-box-inner img {
-  transition: all 2s ease-in-out;
-  filter: blur(0px) !important;
-}
-
-.badge:hover {
-  animation-name: hvr-pulse;
-  animation-duration: 2s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.badge:hover .skill-badge {
-  border: 0.3rem solid var(--color-secondary) !important;
-}
-.badge:hover .skill-name {
-  color: var(--color-secondary) !important;
-}
-
-.do-item:hover {
-  animation-name: hvr-push;
-  animation-duration: 0.3s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-}
-
-.blog:hover {
-  box-shadow: 1px 1px 30px var(--color-secondary);
-  transform: translateY(-35px);
-}
-.blog:hover img {
-  filter: grayscale(0);
-  transform: scale(1);
-  height: 225px;
-}
-.blog:hover .blog-text {
-  height: 225px;
-}
-.blog:hover .blog-text h4 {
-  font-size: 0rem;
-  transition: all 0.4s ease-in-out;
-  color: var(--color-grey-5);
-}
-.blog:hover .blog-text p {
-  font-size: 2rem;
-  color: var(--color-grey-0);
-  line-height: 2.5rem;
-}
-
 :root {
   --color-primary: rgb(25, 29, 43);
   --color-secondary: rgb(40, 175, 95);
@@ -730,9 +679,55 @@ body {
   color: var(--color-secondary);
 }
 
-/* @media (hover: hover) {
-
-} */
+@media (hover: hover) {
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(560deg);
+  }
+  .flip-box:hover .flip-box-inner img {
+    transition: all 2s ease-in-out;
+    filter: blur(0px) !important;
+  }
+  .badge:hover {
+    animation-name: hvr-pulse;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .badge:hover .skill-badge {
+    border: 0.3rem solid var(--color-secondary) !important;
+  }
+  .badge:hover .skill-name {
+    color: var(--color-secondary) !important;
+  }
+  .do-item:hover {
+    animation-name: hvr-push;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+  .blog:hover {
+    box-shadow: 1px 1px 30px var(--color-secondary);
+    transform: translateY(-35px);
+  }
+  .blog:hover img {
+    filter: grayscale(0);
+    transform: scale(1);
+    height: 225px;
+  }
+  .blog:hover .blog-text {
+    height: 225px;
+  }
+  .blog:hover .blog-text h4 {
+    font-size: 0rem;
+    transition: all 0.4s ease-in-out;
+    color: var(--color-grey-5);
+  }
+  .blog:hover .blog-text p {
+    font-size: 2rem;
+    color: var(--color-grey-0);
+    line-height: 2.5rem;
+  }
+}
 @media screen and (max-width: 1100px) {
   .home-content .left-home .flip-box-back .animate-charcter {
     font-size: 2.5rem;

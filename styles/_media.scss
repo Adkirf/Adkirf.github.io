@@ -1,7 +1,73 @@
 //Animations: Desktop
-/* @media (hover: hover) {
-
-} */
+ @media (hover: hover) {
+        //Home
+        .flip-box:hover {
+            .flip-box-inner{
+                transform: rotateY(560deg);
+        
+                img {
+                    transition: all 2s ease-in-out;
+                    filter: blur(0px) !important;
+                }
+            }
+        }
+        //Do 
+        .badge:hover{
+            -webkit-animation-name: hvr-pulse;
+            animation-name: hvr-pulse;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        
+            .skill-badge {
+                border: 0.3rem solid var(--color-secondary)!important;
+            }
+        
+            .skill-name {
+                color: var(--color-secondary)!important;
+            }
+        }
+        .do-item:hover {
+            -webkit-animation-name: hvr-push;
+            animation-name: hvr-push;
+            -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+        }
+        //Doing
+        .blog:hover {
+            box-shadow: 1px 1px 30px var(--color-secondary);
+            transform: translateY(-35px);
+    
+            img {
+                filter: grayscale(0);
+                transform: scale(1);
+                height: 225px;
+            }
+    
+            .blog-text {
+                height: 225px;
+    
+                h4 {
+                    font-size: 0rem;
+                    transition: all 0.4s ease-in-out;
+                    color: var(--color-grey-5);
+                }
+    
+                p {
+                    font-size: 2rem;
+                    color: var(--color-grey-0);
+                    line-height: 2.5rem;
+                }
+            }
+        }
+} 
 
 //Breakpoints: Desktop
 @media screen and (max-width: 1100px) {
