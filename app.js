@@ -10,8 +10,8 @@ function addGlobalEventListener(type, selector, callback){
     if(e.target.matches(selector)) callback(e);
   });
 }
-function addGlobalTouchStart(type, selector, toToggle){
-  type.ontouchstart = () => selector.classList.toggle(toToggle);
+function addTouchAnimation(element, animation){
+  element
 }
 
 function PageTransitions() {
@@ -21,7 +21,8 @@ function PageTransitions() {
   ;
   //Do-Touch
   document.querySelector(".hvr-push").addEventListener("touchstart",function(){
-    this.classList.toggle("pushDo");
+    this.classList.add("pushDo");
+    this.classList.remove("pushDo");
   });
   //addGlobalEvenListener('touchstart','.hvr-push',this.classList.add("pushDo"));
   document.querySelector(".hvr-pulse").ontouchstart = 
