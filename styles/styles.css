@@ -349,6 +349,7 @@ body {
 .do-badges .badges {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .do-badges .badges .badge {
   margin-top: 3rem;
@@ -745,6 +746,56 @@ body {
   }
 }
 @media screen and (max-width: 800px) {
+  .switchAdkirf .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  .switchAdkirf .flip-box-inner img {
+    transition: all 1s ease-in-out;
+    filter: blur(0px) !important;
+  }
+  .flip-box {
+    transition: all 1s ease-in-out;
+  }
+  .pulseBadge {
+    animation-name: hvr-pulse;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .pulseBadge .skill-badge {
+    border: 0.3rem solid var(--color-secondary) !important;
+  }
+  .pulseBadge .skill-name {
+    color: var(--color-secondary) !important;
+  }
+  .pushDo {
+    animation-name: hvr-push;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+  .focusBlog {
+    box-shadow: 1px 1px 30px var(--color-secondary);
+    transform: translateY(-35px);
+  }
+  .focusBlog img {
+    filter: grayscale(0);
+    transform: scale(1);
+    height: 225px;
+  }
+  .focusBlog .blog-text {
+    height: 225px;
+  }
+  .focusBlog .blog-text h4 {
+    font-size: 0rem;
+    transition: all 0.4s ease-in-out;
+    color: var(--color-grey-5);
+  }
+  .focusBlog .blog-text p {
+    font-size: 2rem;
+    color: var(--color-grey-0);
+    line-height: 2.5rem;
+  }
   .main-title h2 {
     font-size: 2.5rem !important;
   }
@@ -831,6 +882,9 @@ body {
   }
   .do-badges .badges {
     flex-direction: column;
+  }
+  .do-badges .badges .badge {
+    width: 100px;
   }
   .myway {
     padding-right: 0rem;
@@ -949,53 +1003,6 @@ body {
   }
   .blogs .blog .blog-text p {
     line-height: 1rem !important;
-  }
-  .switchAdkirf .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  .switchAdkirf .flip-box-inner img {
-    transition: all 1s ease-in-out;
-    filter: blur(0px) !important;
-  }
-  .pulseBadge {
-    animation-name: hvr-pulse;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-  .pulseBadge .skill-badge {
-    border: 0.3rem solid var(--color-secondary) !important;
-  }
-  .pulseBadge .skill-name {
-    color: var(--color-secondary) !important;
-  }
-  .pushDo {
-    animation-name: hvr-push;
-    animation-duration: 0.3s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-  }
-  .focusBlog {
-    box-shadow: 1px 1px 30px var(--color-secondary);
-    transform: translateY(-35px);
-  }
-  .focusBlog img {
-    filter: grayscale(0);
-    transform: scale(1);
-    height: 225px;
-  }
-  .focusBlog .blog-text {
-    height: 225px;
-  }
-  .focusBlog .blog-text h4 {
-    font-size: 0rem;
-    transition: all 0.4s ease-in-out;
-    color: var(--color-grey-5);
-  }
-  .focusBlog .blog-text p {
-    font-size: 2rem;
-    color: var(--color-grey-0);
-    line-height: 2.5rem;
   }
 }
 @media screen and (max-width: 475px) {
