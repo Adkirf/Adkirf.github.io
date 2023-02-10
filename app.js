@@ -33,6 +33,11 @@ function PageTransitions() {
     setTimeout(()=>{e.classList.remove("pushDo")},"1000");
   });
 
+  document.querySelectorAll(".do-items").forEach((e)=>addTouchAnimation(e,(e)=>{
+    e.classList.add("pushDo");
+    setTimeout(()=>{e.classList.remove("pushDo")},"1000");
+  }));
+
   document.querySelectorAll(".badge").forEach((e)=>{
     e.addEventListener("touchstart",(touched)=>{
       touched.classList.toggle("pulseBadge");
