@@ -77,6 +77,7 @@ function PageTransitions() {
 
   });
 
+  //Done Content
   selectElement(".s-right").addEventListener("click", ()=> nextSwitchPossible(true));
   selectElement(".s-left").addEventListener("click", () => nextSwitchPossible(false));
 }
