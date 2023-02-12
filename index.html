@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <main>
         <section class="container home active" id="home">
             <div class="home-content">
@@ -270,54 +271,77 @@
                         </div>
                     </div>
                 </div>
+                <div class="switch-btn s-right">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="switch-btn s-left list-end">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
             </div>
-            <div class="switch-btn s-right">
-                <i class="fas fa-arrow-right"></i>
-            </div>
-            <div class="switch-btn s-left list-end">
-                <i class="fas fa-arrow-left"></i>
-            </div>
+            
         </section>
         <section class="container doing" id="doing">
-            <div class="doing-content">
-                <div class="main-title">
-                    <h2>What I am <span>Doing.</span></h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="blog swiper-slide">
+                        <img src="./img/logoDark.png" alt="" class="blog-image">
+                        <div class="blog-data-container">
+                            <div class="blog-data">
+                                <span>12. Dec. 2012</span>
+                                <span class="blog-data-spacer"></span>
+                                <span>5 Min read</span>
+                            </div>
+                            <h3 class="title blog-title">Sample blog title 1</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="blog swiper-slide">
+                        <img src="./img/pfp.png" alt="" class="blog-image">
+                        <div class="blog-data-container">
+                            <div class="blog-data">
+                                <span>13. Dec. 2012</span>
+                                <span class="blog-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+                            <h3 class="title blog-title">Sample blog title 2</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="blog swiper-slide">
+                        <img src="./img/logoBright.png" alt="" class="blog-image">
+                        <div class="blog-data-container">
+                            <div class="blog-data">
+                                <span>14. Dec. 2012</span>
+                                <span class="blog-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+                            <h3 class="title blog-title">Sample blog title 3</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="blog swiper-slide">
+                        <img src="./img/logoDark.png" alt="" class="blog-image">
+                        <div class="blog-data-container">
+                            <div class="blog-data">
+                                <span>15. Dec. 2012</span>
+                                <span class="blog-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+                            <h3 class="title blog-title">Sample blog title 4</h3>
+                        </div>
+                    </a>
+                    <a href="#" class="blog swiper-slide">
+                        <img src="./img/logoDark.png" alt="" class="blog-image">
+                        <div class="blog-data-container">
+                            <div class="blog-data">
+                                <span>15. Dec. 2012</span>
+                                <span class="blog-data-spacer"></span>
+                                <span>3 Min read</span>
+                            </div>
+                            <h3 class="title blog-title">Sample blog title 4</h3>
+                        </div>
+                    </a>
                 </div>
-                <div class="blogs">
-                    <div class="blog">
-                        <img src="img/logoBright.png" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                This is a test post.
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. </br>
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. </br>
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. </br>
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. </br>
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. </br>
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/pfp.png" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Hello, World!
-                            </h4>
-                            <p>
-                                Welcome to the Adkirf Portfolio and thank you for taking your time to explore my portfolio. This website is my first project, and I will use it to show off new skills I have learned, link to all my other projects, and give you general information about what I am doing. <br>This section will serve as a blog in which I update important news. In future this blog will display my progress in a chronological order.<br> <br> Important changes and announcements for this website or any other project I might be working on, will be recorded in here. My hope is that this gives me and other readers an overview of my progress. </br> </br> Let's start this journey. Are you with me?
-
-                            </p>
-                        </div>
-                    </div>
+                <div class="swiper-button-prev swiper-controls"></div>
+                <div class="swiper-button-next swiper-controls"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
     </main>
@@ -340,6 +364,7 @@
         <i class="fas fa-adjust"></i>
     </div>
     <script type="module" src="app.js"></script>
+    <script src="swiper-bundle.min.js"></script>
 </body>
 </html
 
