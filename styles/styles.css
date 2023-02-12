@@ -730,6 +730,49 @@ body {
   background-color: var(--color-secondary) !important;
 }
 
+.post {
+  padding-bottom: 0;
+  display: flex;
+  color: var(--color-grey-1);
+}
+.post img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.post .post-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  flex-direction: column;
+  width: 100%;
+}
+.post .post-footer .more {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.post .post-footer .post-data {
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.post .post-footer .see-more {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  transition: 1s;
+  height: 100px;
+}
+
 .main-title {
   text-align: center;
   margin-bottom: 3rem;
