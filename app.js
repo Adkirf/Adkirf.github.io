@@ -1,10 +1,4 @@
-const sections = document.querySelectorAll(".container");
-const sectBtns = document.querySelectorAll(".control");
-const allSections = document.querySelector(".main-content");
-const rightSwitch = document.querySelectorAll(".switch-btn")[0];
-const leftSwitch = document.querySelectorAll(".switch-btn")[1];
-const doneItems = document.querySelectorAll(".done-item");
-
+import anime from '/node_modules/animejs/lib/anime.es.js';
 
 function addTouchAnimation(element, callback){
   document.addEventListener("touchstart",e=>{
@@ -13,48 +7,84 @@ function addTouchAnimation(element, callback){
     }
   });
 }
-
+const selectElement = selector=>{
+  const element = document.querySelector(selector);
+  if(element) return element;
+  throw new Errror('element not found');
+}
+const selectElements = selector=>{
+  const elements = document.querySelectorAll(selector);
+  if(elements) return elements;
+  throw new Errror('elements not found');
+}
 
 function PageTransitions() {
+
   //Home-Touch
-  document.querySelector(".left-home").addEventListener("touchstart",()=>{
+  selectElement(".left-home").addEventListener("touchstart",()=>{
     document.querySelector(".flip-box").classList.toggle("switchAdkirf");
   });
+  Promise.all(
+    selectElement(".home").getAnimations().map((animation)=>animation.finished)).then(
+      selectElements(".slide-in").forEach( (e,i)=>{
+
+        setTimeout(()=>{
+          let slideIn = i%2===0?"left":"right";
+          e.classList.add(slideIn);
+        },(1+i)*1000);
+      }));
+
 
   //Do-Touch
-  document.querySelectorAll(".do-item").forEach((e)=>addTouchAnimation(e,function(e){
+  selectElements(".do-item").forEach((e)=>addTouchAnimation(e,function(e){
     e.classList.add("pushDo");
     setTimeout(()=>{e.classList.remove("pushDo")},"1000");
   }));
-  document.querySelectorAll(".badge").forEach((e)=>addTouchAnimation(e,(e)=>{
+  selectElements(".badge").forEach((e)=>addTouchAnimation(e,(e)=>{
     e.classList.toggle("pulseBadge");
   }));
   //Doing-Touch
-  document.querySelectorAll(".blog").forEach((e)=>addTouchAnimation(e,(e)=>{
+  selectElements(".blog").forEach((e)=>addTouchAnimation(e,(e)=>{
     e.classList.toggle("focusBlog");
   }));
  
 
   //Button click actvie class
-  for (let i = 0; i < sectBtns.length; i++) {
-    sectBtns[i].addEventListener("click", function () {
-      document.querySelector(".active-btn").classList.remove("active-btn");
+  selectElements(".control").forEach((e)=>{
+    e.addEventListener("click", function(){
+      selectElement(".active-btn").classList.remove("active-btn");
       this.classList.add("active-btn");
-      document.querySelector(".active").classList.remove("active");
+      selectElement(".active").classList.remove("active");
       document.getElementById(this.dataset.id).classList.add("active");
     });
-  }
-  const themeBtn = document.querySelector(".theme-btn");
-  themeBtn.addEventListener("click", () => {
-    let element = document.body;
-    element.classList.toggle("light-mode");
   });
 
-  rightSwitch.addEventListener("click", () => nextSwitchPossible(true));
-  leftSwitch.addEventListener("click", () => nextSwitchPossible(false));
+  //Theme and ThemeBtn
+  const bodyElement = document.body;
+  const currentTheme = localStorage.getItem("currentTheme");
+
+  if(currentTheme){
+    bodyElement.classList.add("light-mode");
+  }
+  selectElement(".theme-btn").addEventListener("click", () => {
+
+    if(bodyElement.classList.contains("light-mode")){
+      localStorage.setItem("currentTheme", "themeActive");
+    }else{
+      localStorage.removeItem("currentItem");
+    }
+    bodyElement.classList.toggle("light-mode");
+
+  });
+
+  selectElement(".s-right").addEventListener("click", ()=> nextSwitchPossible(true));
+  selectElement(".s-left").addEventListener("click", () => nextSwitchPossible(false));
 }
 
 function nextSwitchPossible(switchForwards) {
+  let rightSwitch = selectElement(".s-right");
+  let leftSwitch =  selectElement(".s-left");
+  let doneItems = selectElements(".done-item");
   for (let i = 0; i < doneItems.length; i++) {
     if (switchForwards) {
       doneItems[i].classList.remove("last");
