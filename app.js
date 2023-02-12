@@ -1,5 +1,3 @@
-import anime from '/node_modules/animejs/lib/anime.es.js';
-
 function addTouchAnimation(element, callback){
   document.addEventListener("touchstart",e=>{
     if(element.contains(e.target)){
