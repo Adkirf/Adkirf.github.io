@@ -15,5 +15,5 @@ document.querySelector(".theme-btn").addEventListener("click", () => {
 
 });
 document.querySelector(".more").addEventListener("click",()=>{
-    document.querySelector(".post-data").classList.toggle("see-more");
+    document.querySelector(".wrapper").classList.toggle("continue");
 });

@@ -741,36 +741,72 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.post .post-footer {
+.post .more {
   position: fixed;
-  bottom: 0;
-  left: 0;
   display: flex;
-  color: aliceblue;
-  background-color: rgba(0, 0, 0, 0.75);
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  flex-direction: column;
-  width: 100%;
-}
-.post .post-footer .more {
-  margin: 2rem;
-  display: flex;
+  bottom: 10rem;
+  margin-left: 5rem;
+  font-size: 3rem;
+  height: 6.5rem;
+  width: 6.5rem;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  border-radius: 50%;
+  background-color: var(--color-grey-4);
+  color: var(--color-grey-2);
+  cursor: pointer;
 }
-.post .post-footer .post-data {
+.post .wrapper {
+  position: fixed;
   transform: scale(0);
-  opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-.post .post-footer .see-more {
-  display: block;
-  opacity: 1;
-  transform: scale(1);
+.post .continue {
+  width: 30%;
   transition: 1s;
-  height: 100px;
+  position: fixed;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  bottom: 20rem;
+  margin-left: 5rem;
+  font-size: 3rem;
+  align-items: center;
+  transform: scale(1);
+}
+.post .continue .text-continue {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  text-align: center;
+}
+.post .continue .last-post {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  display: flex;
+  justify-content: center;
+}
+.post .continue .next-post {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  display: flex;
+  justify-content: center;
+}
+.post .continue .return {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  display: flex;
+  justify-content: center;
+}
+.post .continue .post-twitter {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  display: flex;
+  justify-content: center;
 }
 
 .main-title {
@@ -819,6 +855,9 @@ body {
   }
   .blog:hover .blog-data-container {
     background-color: var(--color-blog);
+    color: var(--color-grey-4);
+  }
+  .blog:hover .blog-data {
     color: var(--color-grey-4);
   }
   .blog:hover .blog-data-spacer {
