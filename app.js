@@ -42,9 +42,6 @@ function PageTransitions() {
     e.classList.toggle("pulseBadge");
   }));
   //Doing-Touch
-  selectElements(".blog").forEach((e)=>addTouchAnimation(e,(e)=>{
-    e.classList.toggle("focusBlog");
-  }));
  
 
   //Button click actvie class

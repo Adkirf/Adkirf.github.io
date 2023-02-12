@@ -374,7 +374,6 @@ body {
 .do-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 3.5rem;
     padding-bottom: 15rem;
     padding-right: 5rem;
 
@@ -565,8 +564,6 @@ body {
 
 
 /*Done Content*/
-
-
 .switch-btn {
     grid-row-start: 2;
     i {
@@ -597,7 +594,6 @@ body {
         grid-template-rows: 10fr 1fr;
         justify-items: center;
         align-items: center;
-        padding-top: 2rem;
         justify-content: center;
         height: 500px;
 
@@ -769,6 +765,7 @@ body {
 }
 
 /*Doing Content*/
+
 .swiper-wrapper{
     height: auto;
     .swiper-slide{
@@ -839,7 +836,7 @@ body {
 //Independent components 
 .main-title {
     text-align: center;
-
+    margin-bottom: 3rem;
     h2 {
         position: relative;
         text-transform: uppercase;
