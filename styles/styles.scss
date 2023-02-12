@@ -777,20 +777,6 @@ body {
     .blog{
         position: relative;
         min-height: 30rem;
-        &:hover{
-            .blog-data-container{
-                background-color: var(--color-blog);
-                color: var(--color-grey-4);
-
-            }
-            .blog-data-spacer{
-                background-color: var(--color-secondary);
-            }
-            .blog-title{
-                color: var(--color-grey-4);
-            }
-
-        }
         .blog-image{
             position: absolute;
             width: 100%;

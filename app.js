@@ -69,7 +69,7 @@ function PageTransitions() {
     if(bodyElement.classList.contains("light-mode")){
       localStorage.setItem("currentTheme", "themeActive");
     }else{
-      localStorage.removeItem("currentItem");
+      localStorage.removeItem("currentTheme");
     }
     bodyElement.classList.toggle("light-mode");
 
