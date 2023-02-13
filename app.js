@@ -64,9 +64,10 @@ function PageTransitions() {
   selectElement(".theme-btn").addEventListener("click", () => {
 
     if(bodyElement.classList.contains("light-mode")){
-      localStorage.setItem("currentTheme", "themeActive");
-    }else{
       localStorage.removeItem("currentTheme");
+
+    }else{
+      localStorage.setItem("currentTheme", "themeActive");
     }
     bodyElement.classList.toggle("light-mode");
 
@@ -105,6 +106,14 @@ const swiper = new Swiper(".swiper", {
   }   
 });
 }
+
+
+
+
+
+
+
+
 
 function nextSwitchPossible(switchForwards) {
   let rightSwitch = selectElement(".s-right");
