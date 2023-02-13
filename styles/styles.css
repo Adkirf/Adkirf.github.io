@@ -770,9 +770,6 @@ body {
   border-radius: 50%;
   background-color: var(--color-primary);
 }
-.post .menu .menu-btn:active {
-  box-shadow: 0 4px 8px 0 hsla(0deg, 0%, 0%, 0.4);
-}
 .post .menu .icons-wrapper {
   padding: 0;
   margin: 0;

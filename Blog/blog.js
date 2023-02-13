@@ -15,17 +15,23 @@ document.querySelector(".theme-btn").addEventListener("click", (e) => {
   bodyElement.classList.toggle("light-mode");
 });
 
-
-
 document.querySelector(".menu-btn").addEventListener("click",()=>{
   document.querySelector(".menu").classList.toggle("active");
+});
+
+document.addEventListener("touch",e=>{
+  let menu = document.querySelector(".menu");
+  if(!menu.contains(e.target)){
+    menu.classList.remove("active");
+    console.log(1);
+  }
 });
 
 let scrollPercentage = ()=>{
   let scrollProgress = document.querySelector(".menu-btn");
   let progressValue = document.querySelector(".progress-value");
   let pos = document.documentElement.scrollTop;
-  let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let calcHeight = document.documentElement.scrollHeight - (document.documentElement.clientHeight+60);
   let scrollValue = Math.round(pos * 100 / calcHeight);
   let primary;
   let secondary;
@@ -35,6 +41,12 @@ let scrollPercentage = ()=>{
   }else{
     primary  = getComputedStyle(document.documentElement).getPropertyValue('--color-primary');
     secondary = getComputedStyle(document.documentElement).getPropertyValue('--color-secondary');
+  }
+  if(scrollValue<=0){
+    scrollValue=0;
+  }
+  if(scrollValue>=100){
+    scrollValue=100;
   }
   scrollProgress.style.background = `conic-gradient(${secondary} ${scrollValue}%, ${primary} ${scrollValue}% )`;
   progressValue.textContent = `${scrollValue}%`;
