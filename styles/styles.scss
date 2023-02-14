@@ -946,10 +946,6 @@ body {
             justify-content: center;
             background-color: var(--color-grey-3);
             transition: transform .4s ease, background .4s ease;
-            &:hover {
-                background-color: var(--color-grey-5);
-                color: var(--color-grey-0);
-            }
         }
           
     }

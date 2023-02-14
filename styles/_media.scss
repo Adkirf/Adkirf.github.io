@@ -325,8 +325,14 @@
     }
     .menu{
         &:after{
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 3.5em;
+          height: 3.5em;
+        }
+        .menu-item{
+            &:hover {
+                background-color: var(--color-grey-5);
+                color: var(--color-grey-0);
+            }
         }
     }
 

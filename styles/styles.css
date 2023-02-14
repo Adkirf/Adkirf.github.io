@@ -841,10 +841,6 @@ body {
   background-color: var(--color-grey-3);
   transition: transform 0.4s ease, background 0.4s ease;
 }
-.menu .icons-wrapper .menu-item:hover {
-  background-color: var(--color-grey-5);
-  color: var(--color-grey-0);
-}
 .menu:after {
   display: block;
   content: " ";
@@ -1146,8 +1142,12 @@ footer .links-container p {
     width: 80%;
   }
   .menu:after {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.5em;
+    height: 3.5em;
+  }
+  .menu .menu-item:hover {
+    background-color: var(--color-grey-5);
+    color: var(--color-grey-0);
   }
 }
 @media screen and (max-width: 475px) {
