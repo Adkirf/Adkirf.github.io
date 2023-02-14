@@ -815,6 +815,7 @@ body {
   outline: 0;
 }
 .menu .menu-btn .progress-value {
+  font-size: 1rem;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -838,7 +839,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--color-grey-3);
-  transition: transform 0.75s ease, background 0.2s ease;
+  transition: transform 0.4s ease, background 0.4s ease;
 }
 .menu .icons-wrapper .menu-item:hover {
   background-color: var(--color-grey-5);
@@ -847,15 +848,15 @@ body {
 .menu:after {
   display: block;
   content: " ";
-  width: 3.5em;
-  height: 3.5em;
+  width: 3.7em;
+  height: 3.7em;
   border-radius: 50%;
   position: fixed;
   bottom: 1.3rem;
   right: 1.3rem;
   z-index: -2;
   background-color: var(--color-post-menue-transparent);
-  transition: all 0.75s ease;
+  transition: all 0.4s ease;
   border: solid var(--color-post-menue-transparent);
 }
 
@@ -1143,6 +1144,10 @@ footer .links-container p {
   }
   .swiper-wrapper {
     width: 80%;
+  }
+  .menu:after {
+    width: 3.5rem;
+    height: 3.5rem;
   }
 }
 @media screen and (max-width: 475px) {

@@ -323,6 +323,12 @@
     .swiper-wrapper{
         width: 80%;
     }
+    .menu{
+        &:after{
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+    }
 
 }
 
