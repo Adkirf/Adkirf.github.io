@@ -19,11 +19,10 @@ document.querySelector(".menu-btn").addEventListener("click",()=>{
   document.querySelector(".menu").classList.toggle("active");
 });
 
-document.addEventListener("touch",e=>{
+document.addEventListener("touchstart",e=>{
   let menu = document.querySelector(".menu");
   if(!menu.contains(e.target)){
     menu.classList.remove("active");
-    console.log(1);
   }
 });
 
@@ -31,7 +30,7 @@ let scrollPercentage = ()=>{
   let scrollProgress = document.querySelector(".menu-btn");
   let progressValue = document.querySelector(".progress-value");
   let pos = document.documentElement.scrollTop;
-  let calcHeight = document.documentElement.scrollHeight - (document.documentElement.clientHeight+60);
+  let calcHeight = document.documentElement.scrollHeight - (document.documentElement.clientHeight + document.querySelector(".blog-footer").offsetHeight +  getComputedStyle(document.documentElement).getPropertyValue('--margin-footer:'));
   let scrollValue = Math.round(pos * 100 / calcHeight);
   let primary;
   let secondary;

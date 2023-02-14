@@ -18,7 +18,7 @@ html {
   --color-grey-3: rgb(75, 75, 75);
   --color-grey-4: rgb(45, 45, 45);
   --color-grey-5: rgb(0, 0, 0);
-  --br-sm-2: 14px;
+  --br-sm-2: 1.4rem;
   --box-shadow-1: radial-gradient(ellipse at center, rgba(40, 175, 95, 0.35) 0%, rgba(40, 175, 95, 0) 80%);
   --glow-line: rgb(75, 175, 40);
   --gradient-1: rgb(20, 220, 25) 67%;
@@ -26,6 +26,7 @@ html {
   --color-blog-transparent:rgba(25, 29, 43, 0.666);
   --color-blog:rgb(189, 183, 183);
   --color-post-menue-transparent: rgba(189, 183, 183,0.8);
+  --margin-footer: 2rem;
 }
 
 .light-mode {
@@ -733,7 +734,6 @@ body {
 }
 
 .post {
-  padding-bottom: 0;
   display: flex;
   color: var(--color-grey-1);
 }
@@ -833,6 +833,11 @@ body {
 .post .active:after {
   transform: scale3d(5.5, 5.5, 1);
   transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1);
+}
+
+.blog-footer {
+  margin-top: var(--margin-footer);
+  background-color: rgb(20, 20, 20);
 }
 
 .main-title {
