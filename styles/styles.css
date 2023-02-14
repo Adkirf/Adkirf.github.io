@@ -67,6 +67,7 @@ body {
 .active {
   display: block;
   animation: slide-in 1s ease-in-out;
+  min-height: 800px;
 }
 @keyframes slide-in {
   0% {
@@ -760,6 +761,14 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.post .post-content .post-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.post .post-content video {
+  padding: 2rem;
+}
 
 .related-links {
   display: flex;
@@ -849,29 +858,29 @@ body {
   transition: all 0.75s ease;
 }
 
-.active {
+.menu-active {
   animation: none;
 }
-.active .menu-btn {
+.menu-active .menu-btn {
   align-items: center;
   box-shadow: inset 0 0 3px var(--color-secondary);
 }
-.active .menu-item {
+.menu-active .menu-item {
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.active .menu-item:nth-child(1) {
+.menu-active .menu-item:nth-child(1) {
   transform: translate3d(1em, -7em, 0);
 }
-.active .menu-item:nth-child(2) {
+.menu-active .menu-item:nth-child(2) {
   transform: translate3d(-3.5em, -6.3em, 0);
 }
-.active .menu-item:nth-child(3) {
+.menu-active .menu-item:nth-child(3) {
   transform: translate3d(-6.5em, -3.2em, 0);
 }
-.active .menu-item:nth-child(4) {
+.menu-active .menu-item:nth-child(4) {
   transform: translate3d(-7em, 1em, 0);
 }
-.active:after {
+.menu-active:after {
   transform: scale3d(5.5, 5.5, 1);
   transition-timing-function: cubic-bezier(0.68, 1.55, 0.265, 1);
 }
@@ -974,6 +983,9 @@ footer .links-container p {
     animation-duration: 0.3s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
+  }
+  .active {
+    min-height: 800px;
   }
   .main-title h2 {
     font-size: 2.5rem !important;

@@ -20,13 +20,13 @@ document.querySelector(".theme-btn").addEventListener("click", (e) => {
 });
 
 document.querySelector(".menu-btn").addEventListener("click",()=>{
-  document.querySelector(".menu").classList.toggle("active");
+  document.querySelector(".menu").classList.toggle("menu-active");
 });
 
 document.addEventListener("touchstart",e=>{
   let menu = document.querySelector(".menu");
   if(!menu.contains(e.target)){
-    menu.classList.remove("active");
+    menu.classList.remove("menu-active");
   }
 });
 
@@ -57,9 +57,9 @@ let scrollPercentage = ()=>{
   scrollProgress.style.background = `conic-gradient(${secondary} ${scrollValue}%, ${primary} ${scrollValue}% )`;
   progressValue.textContent = `${scrollValue}%`;
   if(scrollValue===100){
-    document.querySelector(".menu").classList.add("active");
+    document.querySelector(".menu").classList.add("menu-active");
   }else{
-    document.querySelector(".menu").classList.remove("active");
+    document.querySelector(".menu").classList.remove("menu-active");
 
   }
 }

@@ -1,4 +1,4 @@
-//Animations: Desktop
+//Animations: Desktop & Laptops
 @media (hover: hover) {
     //Home
     .flip-box:hover {
@@ -71,7 +71,7 @@
     }
 }  
 
-//Breakpoints: Desktop
+//Breakpoints: Desktop & Laptop
 @media screen and (max-width: 1100px) {
 
     //Home Content
@@ -132,6 +132,10 @@
     }
   
     //Breakpoints
+    
+    .active{
+        min-height: 800px;
+    }
     .main-title {
         h2 {
             font-size: 2.5rem !important;
