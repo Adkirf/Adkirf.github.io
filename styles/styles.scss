@@ -871,7 +871,9 @@ body {
             margin-bottom: 1.5rem;
         }
         video{
+            width: 100%;
             padding: 2rem;
+            object-fit: contain;
         }
     }     
 }
@@ -891,6 +893,8 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         font-size: 2rem;
         font-style: italic;
+        text-align: center;
+
         a{
             color: var(--color-grey-0);
             font-size: 1rem;
@@ -903,6 +907,7 @@ body {
     right: 1em;
     .menu-btn {
         display: flex;
+        
         width: 3.5em;
         height: 3.5em;
         border-radius: 50%;
@@ -956,12 +961,13 @@ body {
         width: 3.5em;
         height: 3.5em;
         border-radius: 50%;
-        position: absolute;
-            top: 0;
-            right: 0;
-            z-index: -2;
-            background-color:var(--color-post-menue-transparent);
-            transition: all .75s ease;
+        position: fixed;
+        bottom: 1.3rem;
+        right: 1.3rem;
+        z-index: -2;
+        background-color:var(--color-post-menue-transparent);
+        transition: all .75s ease;
+        border: solid var(--color-post-menue-transparent) ;
     }
 }  
 .menu-active {
