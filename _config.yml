@@ -19,12 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Adkirf Website
-email: adkirfuglyape@gmail.com
+
 
 baseurl: /Adkirf.github.io/ # the subpath of your site, e.g. /blog
 url: https://adkirf.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: adkirf
-github_username:  Adkirf
+
 
 # Build settings
 theme: 
