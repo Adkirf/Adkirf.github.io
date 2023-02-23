@@ -1,0 +1,130 @@
+---
+permalink: /post/
+solutions:
+    - Solution1
+    - Solution2
+    - Solution3
+    - Solution4
+    - Solution5
+---
+
+
+<link rel="stylesheet" href="/assets/styles/blog/post.css">
+<link rel="stylesheet" href="/assets/styles/blog/swiper-bundle.min.css">
+
+<script src="https://kit.fontawesome.com/d2d7bc25cf.js" crossorigin="anonymous"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/d2d7bc25cf.js" crossorigin="anonymous"></script>
+
+<div class="post-container">
+    <main>
+        <h1>
+            {{ page.title }}
+        </h1>
+        <img src="{{ page.cover_image }}" class="cover-img"></img>
+        {{ content }}
+    </main>
+    <aside class="side-menu">
+        <div class="menu-btn">
+            <span></span>
+        </div>
+        <div class="wrapper">
+            <div class="side header">
+                <a href="/blog/" class="fas fa-home icon"></a>
+                <i id="theme" class="fas fa-adjust icon"></i>
+            </div>
+            <ul class="menu-content"> 
+                <div class="post-info">
+                    {% if page.featured_solutions %}
+                        <h3>
+                            Featured solutions
+                        </h3>
+                        <div class="solutions">
+                            {% for solution in page.featured_solutions %}
+                                    <a href="{{ solution[1] }}" class="solution">
+                                        <i class="fa-solid fa-code"></i>  
+                                        {{ solution[0] }}
+                                    </a>
+                            {% endfor %}
+                            </div>
+                        {% else %}
+                        <h3>
+                            Find other solutions
+                        </h3>
+                        <div class="solutions"> 
+                        {% for solution in site.posts %}
+                            {% if solution.category == "solution" %}
+                         
+                                    <a href="{{ solution.url }}" class="solution">
+                                        <i class="fa-solid fa-code"></i>  
+                                        {{ solution.title }}
+                                    </a>
+                               
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="related-links">
+                    <h3>
+                        Related Links
+                    </h3>
+                    {% for relink in page.related_links %}
+                        {% if relink[1] contains "github" %}
+                        <div class="relink">
+                            <a href="{{ relink[1] }}" class="fa-brands fa-github"> {% if relink[0] %} {{ relink[0] }} {% else %} relink[1] {% endif %}</a>
+                        </div>
+                        {% elsif relink[1] contains "twitter" %} 
+                        <div class="relink">
+                            <a href="{{ relink[1] }}" class="fa-brands fa-twitter"> {% if relink[0] %} {{ relink[0] | capitalize }} {% else %} relink[1] {% endif %}</a>
+                        </div>
+                        {% elsif relink[1] contains "youtube" %}
+                        <div class="relink">
+                            <a href="{{ relink[1] }}" class="fa-brands fa-youtube"> {% if relink[0] %} {{ relink[0] | downcase }} {% else %} relink[1] {% endif %}</a> 
+                        </div>
+                        {% else %}
+                        <div class="relink">
+                            <a href="{{ relink[1] }}" class="fa-solid fa-link"> {% if relink[0] %} {{ relink[0] | capitalize}} {% else %} relink[1] {% endif %}</a>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="swiper post-swiper">
+                    <h3>
+                        More from my Blog
+                    </h3>
+                    <div class="swiper-wrapper">
+                      {% for post in site.posts %}
+                      {% if post.url != page.url and post.category == "post" %}
+                      <div class="swiper-slide">
+                        <a class="related-post" href="{{ post.url }}">
+                            <img class="post-img" src="{{ post.cover_image }}">
+                            <div class="post-title">
+                                <p>
+                                    {{ post.title }}
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                      {% endif %}
+                      {% endfor %}
+                
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </ul>
+            <div class="side footer">
+                <div class="align">
+                    <p> Powered by Adkirf</p>
+                <a href="https://github.com/Adkirf" class="icon" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/adkirf" class="icon" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>
+<script src="/assets/js/post.js"></script>

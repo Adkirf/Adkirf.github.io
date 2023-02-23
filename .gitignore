@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 node_modules
 package.json
 package-lock.json
 .eslintrc.json
+=======
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+>>>>>>> 34bd4ba (Add Jekyl blog)

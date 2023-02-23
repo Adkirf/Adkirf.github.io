@@ -1,0 +1,128 @@
+.blog-home {
+  display: block;
+}
+.blog-home .main-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.blog-home .main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.blog-home .main-title h2 span {
+  color: var(--color-secondary);
+}
+.blog-home .swiper .swiper-wrapper {
+  height: auto;
+}
+.blog-home .swiper .swiper-wrapper .swiper-slide {
+  height: 40rem;
+}
+.blog-home .swiper .swiper-wrapper .blog {
+  position: relative;
+}
+.blog-home .swiper .swiper-wrapper .blog .blog-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.25s;
+}
+.blog-home .swiper .swiper-wrapper .blog .blog-image img {
+  width: 100%;
+}
+.blog-home .swiper .swiper-wrapper .blog .blog-data-container {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 2rem 1.5rem;
+  background-color: var(--color-blog-transparent);
+  z-index: 10;
+  transition: background-color 0.5s;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.blog-home .swiper .swiper-wrapper .blog .blog-data-spacer {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgb(225, 225, 225);
+  transform: rotate(45deg);
+}
+.blog-home .swiper .swiper-wrapper .blog .blog-data {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: rgb(225, 225, 225);
+}
+.blog-home .swiper .swiper-wrapper .blog .blog-title {
+  font-size: 2.4rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: var(--color-nav-text);
+}
+.blog-home .swiper-button-next {
+  right: 0;
+}
+.blog-home .swiper-button-prev {
+  left: 0;
+}
+.blog-home .swiper-button-disabled {
+  opacity: 0 !important;
+  z-index: 10;
+}
+.blog-home .swiper-controls::after {
+  font-size: 1.6rem;
+  color: white;
+}
+.blog-home .swiper-pagination-bullet {
+  background-color: var(--color-nav-text) !important;
+  opacity: 1;
+}
+.blog-home .swiper-pagination-bullet-active {
+  background-color: var(--color-secondary) !important;
+}
+
+@media (hover: hover) {
+  .swiper {
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+  }
+  .swiper-controls {
+    background-color: black;
+    width: 3.5rem;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    z-index: 1;
+  }
+  .blog:hover .blog-data-container {
+    background-color: var(--color-blog) !important;
+    color: var(--color-grey-4) !important;
+  }
+  .blog:hover .blog-data {
+    color: var(--color-grey-4) !important;
+  }
+  .blog:hover .blog-data-spacer {
+    background-color: var(--color-secondary) !important;
+  }
+  .blog:hover .blog-title {
+    color: var(--color-grey-4) !important;
+  }
+  /*  .menu-active{
+   .menu-item:hover{
+       background-color: var(--color-grey-5);
+       color: var(--color-grey-0); 
+   }
+   } */
+}
+@media screen and (max-width: 1200px) {
+  .swiper-wraper {
+    width: 500px;
+  }
+}/*# sourceMappingURL=blog.css.map */

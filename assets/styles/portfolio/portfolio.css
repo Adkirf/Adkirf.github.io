@@ -1,0 +1,627 @@
+.controls {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+.controls .active-control {
+  background-color: var(--color-secondary) !important;
+  transition: all 0.4s ease-in-out;
+}
+
+.controls .active-control i {
+  color: var(--color-grey-5) !important;
+}
+
+.controls .control {
+  cursor: pointer;
+  background-color: var(--color-grey-3);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+}
+
+.controls .control i {
+  font-size: 0.75rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
+}
+
+.section {
+  display: none;
+  background-color: var(--color-primary);
+  cursor: default;
+}
+
+.active-section {
+  display: block;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.main-title h2 span {
+  color: var(--color-secondary);
+}
+
+/*myStack Content*/
+@keyframes hvr-pulse {
+  25% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-push {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.do-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 15rem;
+  padding-right: 5rem;
+}
+.do-container .right-do {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+.do-container .right-do .do-item {
+  border-radius: 5%;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+  border: solid var(--color-secondary);
+}
+.do-container .right-do .do-item .do-text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.do-container .right-do .do-item .do-text .large-text {
+  font-size: 1.5rem;
+  font-weight: 450;
+  color: var(--color-secondary);
+}
+.do-container .right-do .do-item .do-text .small-text {
+  padding-left: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--color-grey-1);
+  letter-spacing: 2px;
+}
+.do-container .right-do .do-item .do-text .small-text::before {
+  content: "";
+  left: 0;
+  top: 15px;
+  width: 2rem;
+  height: 2px;
+}
+.do-container .left-do {
+  padding: 5rem;
+}
+.do-container .left-do p {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding: 1rem;
+  color: var(--color-grey-1);
+}
+.do-container .left-do h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.do-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  color: var(--color-grey-0);
+}
+.do-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 90%;
+  height: 2.5px;
+  background-color: var(--color-grey-4);
+  transform: translateX(-50%);
+}
+
+.do-badges {
+  padding-bottom: 6rem;
+}
+.do-badges .badges {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.do-badges .badges .badge {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.do-badges .badges .badge .skill-name {
+  color: var(--color-grey-2);
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.do-badges .badges .badge .skill-badge {
+  background-color: var(--color-grey-1);
+  width: 75px;
+  height: 100px;
+  border-radius: 5% 5% 45% 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--boxshadow-1);
+}
+.do-badges .badges .badge .skill-badge i {
+  color: var(--color-secondary);
+  font-size: 1.75rem;
+  font-weight: 1000;
+}
+
+.myway {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2rem;
+  padding-left: 5rem;
+  padding-right: 8rem;
+}
+.myway .myway-item {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 1px solid var(--color-grey-4);
+}
+.myway .myway-item .mw-con {
+  position: absolute;
+  left: -2rem;
+  top: -2rem;
+  background-color: var(--color-secondary);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myway .myway-item .mw-con i {
+  font-size: 1.5rem;
+  color: var(--color-grey-4);
+}
+.myway .myway-item .mw-duration {
+  padding: 0.3rem 0.6rem;
+  background-color: var(--color-grey-4);
+  border-radius: 25px;
+  display: inline-block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.myway .myway-item h5 {
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-grey-0);
+}
+.myway .myway-item h5 span {
+  color: var(--color-grey-2);
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.myway .myway-item p {
+  font-size: 1.1rem;
+  color: var(--color-grey-1);
+}
+
+/*myProjects Content*/
+.switch-btn {
+  grid-row-start: 2;
+}
+.switch-btn i {
+  font-size: 3rem;
+  color: var(--color-secondary);
+}
+
+.s-right {
+  display: flex;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.s-left {
+  left: 17.5%;
+}
+
+.list-end {
+  display: none;
+}
+
+.myProjects {
+  justify-content: center;
+}
+.myProjects .done-items {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 10fr 1fr;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+.myProjects .done-items .done-item {
+  display: none;
+  position: relative;
+  transform: translateY(-100%) scale(0);
+  transition: all 0.4s ease-in-out;
+}
+.myProjects .done-items .last,
+.myProjects .done-items .current,
+.myProjects .done-items .next {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+}
+.myProjects .done-items .last .done-image,
+.myProjects .done-items .current .done-image,
+.myProjects .done-items .next .done-image {
+  display: flex;
+  justify-content: center;
+}
+.myProjects .done-items .last .done-image img,
+.myProjects .done-items .current .done-image img,
+.myProjects .done-items .next .done-image img {
+  width: 40%;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 10%;
+}
+.myProjects .done-items .last .done-description,
+.myProjects .done-items .current .done-description,
+.myProjects .done-items .next .done-description {
+  margin-bottom: 2rem;
+}
+.myProjects .done-items .last .done-description h3,
+.myProjects .done-items .current .done-description h3,
+.myProjects .done-items .next .done-description h3 {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-secondary);
+}
+.myProjects .done-items .last .done-description .icons,
+.myProjects .done-items .current .done-description .icons,
+.myProjects .done-items .next .done-description .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 50px;
+}
+.myProjects .done-items .last .done-description .icons a,
+.myProjects .done-items .current .done-description .icons a,
+.myProjects .done-items .next .done-description .icons a {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-grey-5);
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+}
+.myProjects .done-items .last .done-description .icons a i,
+.myProjects .done-items .current .done-description .icons a i,
+.myProjects .done-items .next .done-description .icons a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  color: var(--color-grey-5);
+}
+.myProjects .done-items .last .done-description .description-text,
+.myProjects .done-items .current .done-description .description-text,
+.myProjects .done-items .next .done-description .description-text {
+  display: flex;
+  overflow: scroll;
+  font-size: 1.25rem;
+  max-height: 100px;
+  color: var(--color-grey-2);
+  text-align: center;
+}
+.myProjects .done-items .last,
+.myProjects .done-items .next {
+  position: relative;
+  height: 50%;
+}
+.myProjects .done-items .last .done-description,
+.myProjects .done-items .next .done-description {
+  margin-bottom: 1rem;
+}
+.myProjects .done-items .last .done-description h3,
+.myProjects .done-items .next .done-description h3 {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color-grey-1);
+}
+.myProjects .done-items .last .done-description .icons,
+.myProjects .done-items .next .done-description .icons {
+  display: none;
+}
+.myProjects .done-items .last .done-description .description-text,
+.myProjects .done-items .next .done-description .description-text {
+  display: none;
+}
+@keyframes projectAnimL {
+  0% {
+    transform: translateX(0) scaleX(-100%);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+.myProjects .done-items .last {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  animation: projectAnimL 1s ease-in-out;
+  transform: translateX(0) scale(1);
+}
+.myProjects .done-items .current {
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  animation: projectAnimM 1s ease-in-out;
+  transform: translateX(0) scale(1);
+}
+.myProjects .done-items .current:before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  background: var(--box-shadow-1);
+}
+@keyframes projectAnimM {
+  0% {
+    transform: translateX(0) scaleX(-100%);
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+.myProjects .done-items .next {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  animation: projectAnimL 1s ease-in-out;
+  transform: translateX(0) scale(1);
+}
+
+@media (hover: hover) {
+  .badge:hover {
+    animation-name: hvr-pulse;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .badge:hover .skill-badge {
+    border: 0.3rem solid var(--color-secondary) !important;
+  }
+  .badge:hover .skill-name {
+    color: var(--color-secondary) !important;
+  }
+  .do-item:hover {
+    animation-name: hvr-push;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+  .done-items .current .icons a:hover {
+    background-color: var(--color-secondary) !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main-title h2 {
+    font-size: 2.5rem !important;
+  }
+  .controlls {
+    right: 0%;
+    top: 90%;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+  }
+  .do-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 7rem;
+  }
+  .do-container .left-do {
+    padding: 0rem;
+  }
+  .do-container .right-do .do-item .do-text {
+    padding: 0.75rem;
+  }
+  .do-container .right-do .do-item .do-text .large-text {
+    font-size: 1.2rem;
+  }
+  .do-container .right-do .do-item .do-text .small-text {
+    font-size: 1rem;
+  }
+  .pulseBadge {
+    animation-name: hvr-pulse;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .pulseBadge .skill-badge {
+    border: 0.3rem solid var(--color-secondary) !important;
+  }
+  .pulseBadge .skill-name {
+    color: var(--color-secondary) !important;
+  }
+  .pushDo {
+    animation-name: hvr-push;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+  .do-badges {
+    padding-bottom: 5rem;
+  }
+  .do-badges .badges {
+    flex-direction: column;
+  }
+  .do-badges .badges .badge {
+    width: auto;
+  }
+  .do-badges .badges .badge .skill-badge {
+    height: 7.5rem;
+    width: 5rem;
+  }
+  .myway {
+    padding-right: 0rem;
+    margin-bottom: 4rem;
+    padding-left: 0rem;
+    flex-direction: row;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  .myway .myway-item {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+  .myway .myway-item .mw-duration {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+  }
+  .myway .myway-item p {
+    white-space: normal;
+    margin-right: 10%;
+  }
+  .myway .myway-item .mw-con {
+    top: 0;
+    height: 3rem;
+    width: 3rem;
+  }
+  .done {
+    padding-bottom: 5rem;
+  }
+  .done-items {
+    height: 400px;
+  }
+  .done-items .last,
+  .done-items .next,
+  .done-items .current {
+    gap: 0rem;
+  }
+  .done-items .last h3,
+  .done-items .next h3,
+  .done-items .current h3 {
+    margin-top: 0rem;
+    font-size: 0.8rem;
+  }
+  .done-items .last .icons,
+  .done-items .next .icons,
+  .done-items .current .icons {
+    height: 30px;
+  }
+  .done-items .last .icons a,
+  .done-items .next .icons a,
+  .done-items .current .icons a {
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-primary);
+  }
+  .done-items .last .icons a i,
+  .done-items .next .icons a i,
+  .done-items .current .icons a i {
+    color: var(--color-secondary);
+    font-size: 1rem;
+  }
+  .done-items .current h3 {
+    font-size: 1.25rem;
+  }
+  .done-items .current .description-text {
+    font-size: 1rem;
+    max-height: 150px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .main-title h2 {
+    font-size: 2rem;
+  }
+  .switch-btn {
+    bottom: 20%;
+  }
+  .s-right {
+    right: 5%;
+  }
+  .s-left {
+    left: 5%;
+  }
+  .do-container .left-do p {
+    font-size: 0.8rem;
+  }
+  .do-container .right-do .do-item .do-text .small-text {
+    font-size: 0.75rem;
+  }
+  .myway .myway-item .mw-duration {
+    margin-left: 25px;
+  }
+  .myway .myway-item h5 span {
+    font-size: 1rem;
+  }
+  .myway .myway-item p {
+    font-size: 0.9rem;
+  }
+  .myway .myway-item .mw-con i {
+    font-size: 1rem;
+  }
+  .myway .myway-item .mw-con {
+    left: -1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .myway .myway-item .mw-con i {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=portfolio.css.map */

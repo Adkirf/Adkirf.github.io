@@ -1,0 +1,51 @@
+---
+title: Adkirf title
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Adkirf Website</title>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <script src="https://kit.fontawesome.com/d2d7bc25cf.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="home-btn" href="/">
+        home
+      </a>
+      <ul class="navigation">
+      {% for page in site.pages %}
+        {% if page.title != nil %}
+          <a class="nav-btn" href="{{ page.url }}">
+              {{ page.title }}
+          </a>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </header>
+    <main class="page-content" aria-label="Content">
+      <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
+      </div>
+      <div class="page-container">
+        {{ content }}
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+          <p> Powered by Adkirf</p>
+          <a href="https://github.com/Adkirf" class="icon" target="_blank">
+              <i class="fab fa-github"></i>
+          </a>
+          <a href="https://twitter.com/adkirf" class="icon" target="_blank">
+              <i class="fab fa-twitter"></i>
+          </a>
+      </div>
+    </footer>
+  </body>
+  <script src="/assets/js/page.js"></script>
+
+

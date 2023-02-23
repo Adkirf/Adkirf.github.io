@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "ambidexterityAnomlbysm adfa dfadfdfgsdf sdfgsdfg sdfgsdg sdffdg sdfd "
+date:   2023-02-15 17:23:55 +0100
+category: post
+cover_image: /assets/imgs/pfp.png
+permalink: /blog/post/1
+featured_solutions:
+  - [Solution1, /solution1/]
+  - [Solution2, /solution2/]
+  - [Solution3, /solution3/]
+related_links:
+  - [More on, https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/jekyll/liquid/conditionals/non-empty.html]
+  - [more on ...,https://twitter.com/home]
+  - [more on ..., https://www.youtube.com/watch?v=gyMwXuJrbJQ&t=46355s]
+  - [more on ..., https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element]
+  - [more on ..., https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element]
+  - [more on ..., https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element]
+  - [more on ..., https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element]
+  - [more on ..., https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element]
+  - [more on ..., https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element]
+  - [more on ..., https://stackoverflow.com/questions/16348031/disable-scrolling-when-touch-moving-certain-element]
+
+
+---
+
+
+asdflkasjdfnaslkdfjnaslk jsd sdlkjasdnflaskjdfnasldkjfnasdlknsadlfkjn
