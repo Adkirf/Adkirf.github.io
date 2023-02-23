@@ -8,6 +8,7 @@ featured_solutions:
   - [Demo Solution, /blog/solution/1]
   - [Solution2, /solution2/]
   - [Solution3, /solution3/]
+  
 related_links:
   - [More on, https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/jekyll/liquid/conditionals/non-empty.html]
   - [more on ...,https://twitter.com/home]
