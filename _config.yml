@@ -21,7 +21,7 @@
 title: Adkirf Website
 
 
-baseurl: /Adkirf.github.io/ # the subpath of your site, e.g. /blog
+baseurl:  # the subpath of your site, e.g. /blog
 url: https://adkirf.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 
 

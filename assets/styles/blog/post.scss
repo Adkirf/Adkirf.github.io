@@ -144,11 +144,13 @@ body {
                 top: 0;
                 height: 4rem;
                 z-index: 3;
+                cursor: default;
                 border-bottom: .1rem solid var(--color-nav-header);
                 .icon{
                     margin-top: 1rem;
                     padding-left: 1rem;
                     padding-right: 1rem;
+                    cursor: pointer;
                 }
                 a{
                     text-decoration: none;
@@ -196,7 +198,7 @@ body {
                         color: var(--color-nav-text);
                         font-size: var(--size-text);
                         border: .1rem solid var(--color-nav-text);
-                        border-radius: 2rem;
+                        border-radius: 1rem;
                         height: 5rem;
                         min-width: 10rem;
                         overflow: hidden;
