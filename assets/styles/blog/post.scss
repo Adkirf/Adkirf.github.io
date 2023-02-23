@@ -82,7 +82,7 @@ body {
             margin-bottom: 2rem;
         }
         p{
-            display: grid;
+
             font-size: var(--size-text);
             font-style: italic;
             font-weight: 100;
@@ -343,7 +343,10 @@ body {
 }
 
 @media screen and (max-width:475px) {
-    
+    .menu-btn{
+        top: 2rem!important;
+        right: 2rem!important;
+    }
     .side-menu{
         width: 100%!important;
         .header{
