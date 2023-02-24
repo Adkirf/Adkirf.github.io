@@ -68,7 +68,6 @@ body {
   margin-bottom: 2rem;
   text-align: center;
   height: auto;
-  overflow: hidden;
 }
 .post-container main .cover-img {
   height: 250px;
@@ -321,11 +320,14 @@ body {
   .second-column {
     grid-template-columns: 1fr !important;
   }
+  body {
+    margin-bottom: 0% !important;
+  }
 }
 @media screen and (max-width: 475px) {
   .menu-btn {
     top: 2rem !important;
-    right: 2rem !important;
+    right: 0.2rem !important;
   }
   .side-menu {
     width: 100% !important;
