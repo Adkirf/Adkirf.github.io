@@ -8,7 +8,13 @@ const selectElements = selector=>{
     if(elements) return elements;
     throw new Error('elements not found');
 }
-
+function addTouchAnimation(element, callback){
+  document.addEventListener("touchstart",e=>{
+    if(element.contains(e.target)){
+      callback(element);
+    }
+  });
+}
 
 selectElements(".control").forEach((e)=>{
     e.addEventListener("click", function(){
@@ -57,3 +63,12 @@ function nextSwitchPossible(switchForwards) {
     }
   }
 }
+
+  //Do-Touch
+selectElements(".do-item").forEach((e)=>addTouchAnimation(e,function(e){
+    e.classList.add("pushDo");
+    setTimeout(()=>{e.classList.remove("pushDo")},"1000");
+}));
+selectElements(".badge").forEach((e)=>addTouchAnimation(e,(e)=>{
+  e.classList.toggle("pulseBadge");
+}));

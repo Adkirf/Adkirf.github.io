@@ -8,6 +8,18 @@ const selectElements = selector=>{
   if(elements) return elements;
   throw new Error('elements not found');
 }
+function addTouchAnimation(element, callback){
+  document.addEventListener("touchstart",e=>{
+    if(element.contains(e.target)){
+      callback(element);
+    }
+  });
+}
+
+  //Home-Touch
+  selectElement(".left-home").addEventListener("touchstart",()=>{
+    document.querySelector(".flip-box").classList.toggle("switchAdkirf");
+  });
 
 Promise.all(
     selectElement(".home-content").getAnimations().map((animation)=>animation.finished)).then(
