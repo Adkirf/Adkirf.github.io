@@ -53,7 +53,6 @@ body {
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
   display: grid;
   color: var(--color-text);
-  overflow: scroll;
   /* closing animation */
 }
 .post-container main {
@@ -61,6 +60,8 @@ body {
   flex-direction: column;
   padding: 10% 10% 10% 10%;
   width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .post-container main h1 {
   font-size: var(--size-header-main);
@@ -82,6 +83,7 @@ body {
   margin-bottom: 2rem;
 }
 .post-container main p {
+  text-overflow: clip;
   font-size: var(--size-text);
   font-style: italic;
   font-weight: 100;
@@ -123,12 +125,12 @@ body {
 }
 .post-container .side-menu .wrapper .side {
   z-index: 2;
-  position: sticky;
   width: 100%;
   background-color: black;
   color: var(--color-nav-text);
 }
 .post-container .side-menu .wrapper .header {
+  position: relative;
   top: 0;
   height: 4rem;
   z-index: 3;
@@ -146,6 +148,7 @@ body {
   color: var(--color-nav-text);
 }
 .post-container .side-menu .wrapper .footer {
+  position: absolute;
   display: flex;
   width: 100%;
   height: 6rem;
@@ -167,7 +170,7 @@ body {
 }
 .post-container .side-menu .wrapper .menu-content {
   position: relative;
-  display: flex;
+  display: sticky;
   flex-direction: column;
   margin-left: 1rem;
   margin-right: 1rem;
