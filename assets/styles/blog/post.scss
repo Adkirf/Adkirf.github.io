@@ -155,7 +155,6 @@ body {
                 height: 6rem;
                 align-items: center;
                 justify-content: center;
-                gap: 2rem;
                 bottom: 0;
                 border-top: .1rem solid var(--color-nav-header);
                 a{
@@ -342,15 +341,19 @@ body {
     body{
         margin-bottom: 0%!important;
     }
+    .post-container{
+        height: 120vh!important;
+    }
+    .menu-btn{
+        top: 2rem!important;
+        right: .5rem!important;
+    }
     
     
 }
 
 @media screen and (max-width:475px) {
-    .menu-btn{
-        top: 2rem!important;
-        right: .5rem!important;
-    }
+    
     .side-menu{
         width: 100%!important;
         .header{

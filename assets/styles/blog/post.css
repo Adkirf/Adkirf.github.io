@@ -153,7 +153,6 @@ body {
   height: 6rem;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
   bottom: 0;
   border-top: 0.1rem solid var(--color-nav-header);
 }
@@ -323,12 +322,15 @@ body {
   body {
     margin-bottom: 0% !important;
   }
-}
-@media screen and (max-width: 475px) {
+  .post-container {
+    height: 120vh !important;
+  }
   .menu-btn {
     top: 2rem !important;
     right: 0.5rem !important;
   }
+}
+@media screen and (max-width: 475px) {
   .side-menu {
     width: 100% !important;
   }
