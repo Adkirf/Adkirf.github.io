@@ -52,7 +52,10 @@
 
   
     //Breakpoints
-
+    .page-container{
+        min-height: 70rem;
+        padding: 1rem 1rem 1rem 1rem;
+    }
     .home-content {
         display: grid;
         grid-template-columns: repeat(1, 1fr)!important;
