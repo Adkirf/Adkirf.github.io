@@ -11,15 +11,17 @@ const selectElements = selector=>{
 function addTouchAnimation(element, callback){
   document.addEventListener("touchstart",e=>{
     if(element.contains(e.target)){
+      console.log(e);
       callback(element);
     }
   });
 }
 
   //Home-Touch
-  selectElement(".left-home").addEventListener("touchstart",()=>{
+  addTouchAnimation(selectElement(".left-home"),()=> selectElement(".flip-box").classList.toggle("switchAdkirf"));
+  /* selectElement(".left-home").addEventListener("touchstart",()=>{
     document.querySelector(".flip-box").classList.toggle("switchAdkirf");
-  });
+  }); */
 
 Promise.all(
     selectElement(".home-content").getAnimations().map((animation)=>animation.finished)).then(

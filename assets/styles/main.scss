@@ -201,7 +201,6 @@ body {
                     object-fit: cover;
                 }
             }
-    
             .flip-box-back {
                 transform: rotateY(180deg);
     
@@ -211,6 +210,7 @@ body {
                     object-fit: cover;
                     filter: blur(75px);
                     transition: all 2s ease-in-out;
+
                 }
     
                 .animate-charcter {

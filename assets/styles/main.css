@@ -309,28 +309,16 @@ footer .footer-container p {
     filter: blur(0px) !important;
   }
 }
-@media screen and (max-width: 1200px) {
-  .home-content .left-home .flip-box-back .animate-charcter {
-    font-size: 2.5rem;
-  }
-  .flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
-  }
-  .home-content .right-home {
-    font-size: 1rem !important;
-    gap: 3.5rem !important;
-  }
-}
 @media screen and (max-width: 800px) {
   .switchAdkirf .flip-box-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) !important;
   }
   .switchAdkirf .flip-box-inner img {
-    transition: all 1s ease-in-out;
+    transition: all 1.5s ease-in-out !important;
     filter: blur(0px) !important;
   }
   .flip-box {
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out !important;
   }
   .page-container {
     min-height: 70rem;
